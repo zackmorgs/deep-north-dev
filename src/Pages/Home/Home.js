@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
 
-import Nav from './../Nav/Nav';
-import Services from './../Services/Services';
-import Hero from './../Hero/Hero';
-import Logo from './../Logo/Logo';
-import ImageWall from './../ImageWall/ImageWall';
+import Nav from './../../Components/Nav/Nav';
+import Services from './../../Components/Services/Services';
+import Hero from './../../Components/Hero/Hero';
+import Logo from './../../Components/Logo/Logo';
+import ImageWall from './../../Components/ImageWall/ImageWall';
 import './Home.css';
-// import logo from './../../svg/logo-colorized.svg';
+// import logo from './../../Components/../svg/logo-colorized.svg';
 
-import Images from './../../Data/image-list.json';
+import Images from './../../Components/../Data/image-list.json';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 // todo: make functional component
 class Home extends Component {
@@ -22,7 +23,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <React.Fragment>
+      <Router>
         <div id="background">
           <ImageWall />
         </div>
@@ -32,9 +33,8 @@ class Home extends Component {
             <Nav />
           </Hero>
           <Services />
-
         </div>
-      </React.Fragment>
+      </Router>
     );
   }
 }
