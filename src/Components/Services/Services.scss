@@ -1,0 +1,12 @@
+.services {
+  text-align: center;
+  background: red;
+  padding: 1rem;
+  li {
+    display:inline-block;
+    padding:.1rem .25rem;
+    &:after {
+      content:',';
+    }
+  }
+}

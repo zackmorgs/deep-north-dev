@@ -1,0 +1,5 @@
+{
+  "paymentMethods" : [
+    "Visa", "Mastercard", "Cash", "Interac", "Amex"
+  ]
+}

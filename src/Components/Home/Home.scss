@@ -1,0 +1,122 @@
+html {
+  font-size: 18px;
+  color: white;
+}
+#root {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+body {
+  background: #1507c3;
+  // color:white;
+  font-family: sans-serif;
+  font-family: 'Cormorant Garamond', sans-serif;
+  // background-position: center;
+  // position: absolute;
+  // top: 0;
+  // bottom: 0;
+  // right: 0;
+  // left: 0;
+  // background-image: url('/img/instagram/deepnorthcontracting_13651670_833872360046106_1937318155_n.jpg');
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+}
+
+#background {
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  background: white;
+  overflow:hidden;
+}
+
+#homepage {
+  // padding: 1rem;
+  overflow-y: scroll;
+  // border: 8px solid #d7a03d;
+  margin: 0 1rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  // opacity:0;
+}
+// .background {
+//   background: black;
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   left: 0;
+//   bottom: 0;
+//   z-index: 0;
+// }
+
+
+blockquote:before {
+  content: open-quote;
+}
+blockquote:after {
+  content: close-quote;
+}
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+h4 {
+  text-align: center;
+  font-size: 1.5rem;
+  width: 100%;
+  border-bottom: 3px solid white;
+  padding: 0.25rem 0 0.25rem;
+  margin: 0 0 0.5rem;
+}
+// Start on the smallest screen, work your way up.
+
+/* (iPhone 5 Portrait [320px]) */
+
+/* iPhone 6 and above */
+@media (min-width: 375px) {
+}
+
+@media (min-width: 414px) {
+}
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {
+}
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* Straight-up 1080 */
+@media (min-width: 1920px) {
+}
+
+/* Straight-up 4k Displays */
+@media (min-width: 3840px) {
+}

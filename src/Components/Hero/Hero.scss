@@ -1,0 +1,50 @@
+@import './../../Styles/colors';
+
+.hero {
+  // margin-top:8rem;
+  text-align: center;
+  background: rgba(47, 26, 181, 1);
+  //$regalBlue
+  border-bottom: 8px solid #d7a03d;
+  width: 100%;
+  // max-width: 378px;
+  margin:8rem auto 0;
+}
+// Start on the smallest screen, work your way up.
+
+/* (iPhone 5 Portrait [320px]) */
+
+/* iPhone 6 and above */
+@media (min-width: 375px) {
+}
+
+@media (min-width: 414px) {
+}
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {
+}
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* Straight-up 1080 */
+@media (min-width: 1920px) {
+}
+
+/* Straight-up 4k Displays */
+@media (min-width: 3840px) {
+}
