@@ -10,7 +10,6 @@ import './Home.css';
 // import logo from './../../Components/../svg/logo-colorized.svg';
 
 import Images from './../../Components/../Data/image-list.json';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 // todo: make functional component
 class Home extends Component {
@@ -23,7 +22,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <Router>
+      <React.Fragment>
         <div id="background">
           <ImageWall />
         </div>
@@ -34,7 +33,8 @@ class Home extends Component {
           </Hero>
           <Services />
         </div>
-      </Router>
+
+      </React.Fragment>
     );
   }
 }

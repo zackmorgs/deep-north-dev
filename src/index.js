@@ -6,6 +6,10 @@ import registerServiceWorker from './registerServiceWorker';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+import Site from './Site/Site';
 
-ReactDOM.render(<Home />, document.getElementById('root'));
+ReactDOM.render(
+  <Site />,
+  document.getElementById('root')
+);
 registerServiceWorker();
