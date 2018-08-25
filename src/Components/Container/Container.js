@@ -21,14 +21,14 @@ export class Container extends Component {
   }
 
   render() {
-    let Container = {
-      CssClass: 'bg'
+    let Element = {
+      CssClass: 'container'
     };
 
     // this.state.isLoaded ? Container.CssClass += 'is-loaded' : console.log('loading');
 
-    return <div className={Container.CssClass}>{this.props.children}</div>;
+    return <div className={Element.CssClass}>{this.props.children}</div>;
   }
 }
 
-export default Background;
+export default Container;

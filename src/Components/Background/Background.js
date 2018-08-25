@@ -6,7 +6,7 @@ import './Background.css';
 // import Background from './../Components/Background/Background';
 
 export class Background extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
 
     this.state = {
@@ -15,13 +15,13 @@ export class Background extends Component {
     };
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.setState({
       isLoaded: true
     });
   }
 
-  render() {
+  render () {
     let Container = {
       CssClass: 'bg'
     };
@@ -58,9 +58,45 @@ export class Background extends Component {
           backgroundImage: backgroundImageCss
         }}
       >
+        <Blueprint>{this.props.children}</Blueprint>
+      </div>
+    );
+  }
+}
+
+export class Blueprint extends Component {
+  constructor (props) {
+    super(props);
+
+    this.state({
+      isLoaded: false,
+      gridStart: 160,
+      gridEnd: 80
+    });
+  }
+  componentWillUnmount () {}
+  componentWillMount () {
+    this.setState = {};
+  }
+  componentDidUpdate () {}
+  render () {
+    return (
+      <div id='blueprint'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 `${this.state.gridEnd }` `${this.state.gridEnd }`'
+        >
+          <path fill='#000' class='a' d='M76,4V76H4V4H76m4-4H0V80H80V0Z' />
+        </svg>
         {this.props.children}
       </div>
     );
+  }
+
+  componentDidMount () {
+    this.setState({
+      isLoaded: true
+    });
   }
 }
 

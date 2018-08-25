@@ -2,28 +2,28 @@ import React, { Component } from 'react';
 import './Frame.css';
 
 export class Frame extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
 
     this.state = {
       isLoaded: false
     };
   }
-  componentDidMount() {
+  componentDidMount () {
     this.setState({
       isLoaded: true
     });
   }
-  render() {
-    let Container = {
-      CssClass: 'frame'
+  render () {
+    let Element = {
+      cssClass: 'frame'
     };
 
     this.state.isLoaded
-      ? (Container.CssClass += ' is-loaded')
+      ? (Element.cssClass += ' is-loaded')
       : console.log('loading');
 
-    return <div className={Container.CssClass}>{this.props.children}</div>;
+    return <div className={Element.cssClass}>{this.props.children}</div>;
   }
 }
 
