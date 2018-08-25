@@ -1,0 +1,36 @@
+#homepage {
+  overflow-y: scroll;
+  margin: 0 1rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; }
+
+blockquote:before {
+  content: open-quote; }
+
+blockquote:after {
+  content: close-quote; }
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500; }
+
+h4 {
+  text-align: center;
+  font-size: 1.5rem;
+  width: 100%;
+  border-bottom: 3px solid white;
+  padding: 0.25rem 0 0.25rem;
+  margin: 0 0 0.5rem; }
+
+/* (iPhone 5 Portrait [320px]) */
+/* iPhone 6 and above */
+/* Small devices (landscape phones, 544px and up) */
+/* Small devices (landscape phones, 544px and up) */
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+/* Large devices (desktops, 992px and up) */
+/* Extra large devices (large desktops, 1200px and up) */
+/* Straight-up 1080 */
+/* Straight-up 4k Displays */

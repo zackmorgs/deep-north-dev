@@ -2,14 +2,17 @@ import React, { Component } from 'react';
 // import logo from './../../svg/Asset 2.svg';
 import './Nav.css';
 // todo: make functional component
+
 class Nav extends Component {
   render() {
     return (
       <nav id="main-menu">
         <ul>
-          <li style={{
-            'display': 'none'
-          }}>
+          <li
+            style={{
+              display: 'none'
+            }}
+          >
             <a href="/" target="_blank" rel="noopener noreferrer">
               <div className="icon">
                 <svg
@@ -77,8 +80,21 @@ class Nav extends Component {
           <li>
             <a href="/">
               <div className="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-briefcase"><rect x={2} y={7} width={20} height={14} rx={2} ry={2} /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /></svg>
-
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={24}
+                  height={24}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="feather feather-briefcase"
+                >
+                  <rect x={2} y={7} width={20} height={14} rx={2} ry={2} />
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                </svg>
               </div>
               <span />
             </a>
@@ -107,7 +123,7 @@ class Nav extends Component {
           <li>
             <a
               href="https://www.instagram.com/deepnorthcontracting/"
-             target="_blank"
+              target="_blank"
               rel="noopener"
             >
               <div className="icon">
@@ -136,5 +152,52 @@ class Nav extends Component {
     );
   }
 }
+
+// class Nav extends Component {
+//   constructor(props) {
+//     super(props);
+
+//     this.Pages = () => {
+//       return (
+
+//       );
+//     }
+//   }
+//   render() {
+//     return (
+//       <div className="nav-container">
+//         <nav>
+//           <style>
+//             .nav-toggle {
+
+//             }
+//           </style>
+//           <button className='nav-toggle'>
+//             <span></span>
+//             <span></span>
+//             <span></span>
+//           </button>
+//           <ul>
+//             { this.props.children }
+//           </ul>
+//         </nav>
+//       </div>
+//     );
+//   }
+// }
+
+// class NavItem extends Component {
+//   constructor(props){
+//     super(props);
+//   }
+//   render(){
+//     return(
+//       <li>
+//         <Link to={}>{this.props.children}</Link>
+//       </li>
+//     )
+
+//   }
+// }
 
 export default Nav;

@@ -1,5 +1,7 @@
-{
-  "socialMedia" : [
-    "https://instagram.com/deepnorthcontracting"
-  ]
-}
+[
+  {
+    "Platform": "Instagram",
+    "Url": "https://instagram.com/deepnorthcontracting",
+    "Icon": ""
+  }
+]

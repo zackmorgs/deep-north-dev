@@ -22,7 +22,9 @@
     "serve": "^9.6.0"
   },
   "scripts": {
-    "start": "npm-run-all -p get-image-list build-css react-start watch-css ",
+    "real-start": "npm-run-all -p get-image-list build-css react-start watch-css ",
+    "start": "npm-run-all -p build-css react-start watch-css ",
+        
     "get-image-list": "get-images.bat",
     "react-start": "react-scripts start",
     "build-css": "node-sass src/ -o src/  -r",

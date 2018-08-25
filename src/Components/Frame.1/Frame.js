@@ -23,7 +23,7 @@ export class Frame extends Component {
       ? (Container.CssClass += ' is-loaded')
       : console.log('loading');
 
-    return <div className={Container.CssClass}>{this.props.children}</div>;
+    return <div classsName={Container.CssClass}>{this.props.children}</div>;
   }
 }
 

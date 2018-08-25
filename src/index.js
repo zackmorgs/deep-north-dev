@@ -4,13 +4,10 @@ import './Styles/global.css';
 import Home from './Pages/Home/Home';
 import registerServiceWorker from './registerServiceWorker';
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-import Site from './Site/Site';
+import Website from './Website/Website';
 
-ReactDOM.render(
-  <Site />,
-  document.getElementById('root')
-);
+ReactDOM.render(<Website />, document.getElementById('root'));
 
 registerServiceWorker();
