@@ -1,0 +1,42 @@
+html {
+  font-size: 18px;
+  color: white;
+}
+#root {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+body {
+  background: #1507c3;
+  // color:white;
+  font-family: sans-serif;
+  font-family: 'Cormorant Garamond', sans-serif;
+  // background-position: center;
+  // position: absolute;
+  // top: 0;
+  // bottom: 0;
+  // right: 0;
+  // left: 0;
+  // background-image: url('/img/instagram/deepnorthcontracting_13651670_833872360046106_1937318155_n.jpg');
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+}
+
+#background {
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  background: white;
+  overflow:hidden;
+}

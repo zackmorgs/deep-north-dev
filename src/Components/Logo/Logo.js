@@ -17,7 +17,6 @@ class Logo extends Component {
             }}
           />
         </defs>
-        <title>Asset 1</title>
         <line className="a" x1="8.8" y1="149.32" x2="102.5" y2="149.32" />
         <line className="a" x1="10.5" y1="224.82" x2="63.1" y2="224.82" />
         <line className="a" x1="245.3" y1="224.82" x2="297.8" y2="224.82" />

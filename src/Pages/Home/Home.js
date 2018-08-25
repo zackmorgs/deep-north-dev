@@ -15,25 +15,14 @@ import Images from './../../Components/../Data/image-list.json';
 class Home extends Component {
   constructor(props) {
     super(props);
-    // this way each instance of Carousel wont have to have a bigass array of images.
-    window.Images = Images;
-    window.maxIndex = window.Images.length - 1;
-    window.ImagesInQueue = window.Images;
+
   }
   render() {
     return (
       <React.Fragment>
-        <div id="background">
-          <ImageWall />
+        <div className='frame'>
+          {props.children}
         </div>
-        <div id="homepage">
-          <Hero>
-            <Logo />
-            <Nav />
-          </Hero>
-          <Services />
-        </div>
-
       </React.Fragment>
     );
   }
