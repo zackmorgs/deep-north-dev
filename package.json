@@ -24,7 +24,7 @@
   "scripts": {
     "real-start": "npm-run-all -p get-image-list build-css react-start watch-css ",
     "start": "npm-run-all -p build-css react-start watch-css ",
-        
+    "story": "getstorybook",
     "get-image-list": "get-images.bat",
     "react-start": "react-scripts start",
     "build-css": "node-sass src/ -o src/  -r",
@@ -35,5 +35,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "start-server": "serve -s build"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0"
   }
 }

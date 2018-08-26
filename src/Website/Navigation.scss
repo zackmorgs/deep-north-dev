@@ -1,0 +1,33 @@
+// todo
+.nav-container {
+  font-family: Montserrat;
+  
+  ul {
+    display:flex;
+    width:100%;
+  }
+  li {
+    // flex-flow: row;
+    display:block;
+    align-content: space-around;
+    width:100%;
+    // margin:0 8px;
+  }
+}
+
+// .nav-link & .nav-link:visited {
+//   color: white;
+// }
+.nav-link {
+  text-decoration: none;
+  display: block;
+  border:4px solid white;
+  .caption {
+    color: white;
+    display: block;
+    margin:0 auto;
+    text-align: center;
+    padding:8px;
+  }
+
+}

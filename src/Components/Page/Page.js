@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import './Page';
+import './Page.css';
 
-class Page extends Component {
+export class Page extends Component {
   constructor(props){
     super(props);
+    this.state = {
+      isLoaded : false
+    };
   }
   componentDidMount() {
     console.log('Page : componentDidMount()', this.state);
@@ -25,7 +28,7 @@ class Page extends Component {
   }
   
   render() {
-    let cssClass = 'loading';
+    let cssClass = this.props.className + ' loading';
     if (this.state.isLoaded) {
     }
     // } else {

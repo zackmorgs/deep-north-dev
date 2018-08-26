@@ -20,40 +20,17 @@ export class Background extends Component {
   }
   render () {
     let Container = {
-      CssClass: 'bg'
-    };
-    let fillColor = '%23fff';
-    let gridUnit = '1rem';
-    let angle = 0;
-
-    let opacities = {
-      first: 0.08,
-      last: 0.15
+      cssClass: 'bg'
     };
 
-    let backgroundImageCss =
-      'url("data:image/svg+xml;, <svg xmlns="http://www.w3.org/2000/svg" fill="' +
-      fillColor +
-      '"><pattern id="a" `width="' +
-      gridUnit +
-      '" height="' +
-      gridUnit +
-      '" patternUnits="userSpaceOnUse" patternTransform="rotate(' +
-      angle +
-      ')"><path d"M10 0v9h9v1h-9v9h-1v-9h-9v-1h9v-9" opacity="' +
-      opacities.first +
-      '"><path d="M0 19h19v-19h1v20h-20" opacity="' +
-      opacities.last +
-      '"></pattern><rect width="100%" height="100%" fill="%23004890"/><rect width="100%" height="100%" fill="url(%23a)"/></svg>); !important';
+    this.state.isLoaded
+      ? (Container.cssClass = 'bg')
+      : (Container.cssClass = 'bg');
+    // ill probably animate the gridlines if i have time.
 
     return (
       //
-      <div
-        className={Container.CssClass}
-        style={{
-          backgroundImage: backgroundImageCss
-        }}
-      >
+      <div className={Container.cssClass}>
         <Blueprint>{this.props.children}</Blueprint>
       </div>
     );
@@ -78,8 +55,8 @@ export class Blueprint extends Component {
   render () {
     return (
       <div id='blueprint'>
-        <svg className='gridline' width="80" height="80">
-          <line stroke="10" fill='black' x1='0' y1='0' x2='80' y2='80' />
+        <svg className='gridline' width='80' height='80'>
+          <rect x1='88' y1='0' x2='80' y2='0' />
         </svg>
         {this.props.children}
       </div>

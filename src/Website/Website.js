@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-
+import './Website.css';
+import './Navigation.css';
 // lib
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 
 // data
 
@@ -11,10 +12,12 @@ import About from '../Pages/Home/Home';
 import Contact from '../Pages/Home/Home';
 import Services from '../Pages/Home/Home';
 
+
 // components
+import Container from '../Components/Container/Container';
 import Background from '../Components/Background/Background';
 import Frame from '../Components/Frame/Frame';
-import Nav from '../Components/Nav/Nav';
+// import Nav from '../Components/Nav/Nav';
 import Page from '../Components/Page/Page';
 
 // go
@@ -36,13 +39,13 @@ export default class Website extends Component {
     });
   }
   render () {
-    let Container = {
-      CssClass: 'container'
-    };
+    // let Container = {
+    //   CssClass: 'container'
+    // };
 
-    this.state.isLoaded
-      ? (Container.CssClass += 'is-loaded')
-      : console.log('loading...');
+    // this.state.isLoaded
+    //   ? (Container.CssClass = this.props.className + ' is-loaded')
+    //   : (Container.CssClass = this.props.className + ' is-loading');
 
     return (
       <Container id='deep-north'>
@@ -53,23 +56,44 @@ export default class Website extends Component {
               <nav className='nav-container'>
                 <ul>
                   <li>
-                    <Link
+                    <NavLink
+                      className='nav-link'
                       to={'/'}
                       component={Home}
                       onClick={this.handleMenuItemClick.bind(this)}
+                      onSelect={console.log('selected `${this}`')}
                     >
-                      <span className='Icon' />
                       <span className='caption'>Home</span>
-                    </Link>
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      className='nav-link'
+                      to={'/'}
+                      component={About}
+                      onClick={this.handleMenuItemClick.bind(this)}
+                    >
+                      <span className='caption'>About</span>
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      className='nav-link'
+                      to={'/'}
+                      component={Contact}
+                      onClick={this.handleMenuItemClick.bind(this)}
+                    >
+                      <span className='caption'>Contact</span>
+                    </NavLink>
                   </li>
                 </ul>
               </nav>
 
               <main>
                 <Route exactPath='/' component={Home} />
-                <Route exactPath='/about' component={About} />
-                <Route exactPath='/contact' component={Contact} />
-                <Route exactPath='/services' component={Services} />
+                <Route path='/about' component={About} />
+                <Route path='/contact' component={Contact} />
+                <Route path='/services' component={Services} />
               </main>
             </Page>
           </Router>
