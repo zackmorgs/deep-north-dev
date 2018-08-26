@@ -8,24 +8,20 @@ import './Background.css';
 export class Background extends Component {
   constructor (props) {
     super(props);
-
     this.state = {
       isLoaded: false,
       angle: 0
     };
   }
-
   componentDidMount () {
     this.setState({
       isLoaded: true
     });
   }
-
   render () {
     let Container = {
       CssClass: 'bg'
     };
-
     let fillColor = '%23fff';
     let gridUnit = '1rem';
     let angle = 0;
@@ -68,25 +64,22 @@ export class Blueprint extends Component {
   constructor (props) {
     super(props);
 
-    this.state({
+    this.state = {
       isLoaded: false,
       gridStart: 160,
       gridEnd: 80
-    });
+    };
   }
   componentWillUnmount () {}
   componentWillMount () {
-    this.setState = {};
+    // this.setState = {};
   }
   componentDidUpdate () {}
   render () {
     return (
       <div id='blueprint'>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          viewBox='0 0 `${this.state.gridEnd }` `${this.state.gridEnd }`'
-        >
-          <path fill='#000' class='a' d='M76,4V76H4V4H76m4-4H0V80H80V0Z' />
+        <svg className='gridline' width="80" height="80">
+          <line stroke="10" fill='black' x1='0' y1='0' x2='80' y2='80' />
         </svg>
         {this.props.children}
       </div>
