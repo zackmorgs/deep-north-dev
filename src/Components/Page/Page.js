@@ -26,21 +26,10 @@ export class Page extends Component {
   componentWillUnmount(){
     console.log('Page : componentWillUnmount()', this.state)
   }
-  
+
   render() {
-    let cssClass = this.props.className + ' loading';
-    if (this.state.isLoaded) {
-    }
-    // } else {
-
-    // }
-
-    // if (this.state.isUpdating) {
-
-    // }
-
     return (
-      <div id='page-container' className={cssClass}>
+      <div id='page-container' className={ this.state.isLoaded ? ('loaded') : ('loading') }>
         {this.props.children}
       </div>
     );

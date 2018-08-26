@@ -9,14 +9,14 @@ export class ImageCarousel extends Component {
     };
   }
 
-  componentWillMount () {}
+  componentWillMount () {
 
+  }
   componentDidMount () {
     this.setState({
       isLoaded: true
     });
   }
-
   componentWillReceiveProps (nextProps) {}
 
   shouldComponentUpdate (nextProps, nextState) {}
@@ -29,7 +29,9 @@ export class ImageCarousel extends Component {
 
   render () {
     return (
-      <div className={'carousel-container' + (this.state.isLoaded ? '' : ' loading')} />
+      <div className={this.state.isLoaded ? 'carousel-container' : 'carousel-container loading'}>
+        {this.props.children}
+      </div>
     );
   }
 }
@@ -41,10 +43,10 @@ export default ImageCarousel;
 export class Slide extends Component {
   constructor(props) {
     super(props);
-    
+
   }
   componentDidMount () {
-    
+
   }
   render () {
     return <div className='carousel-img'>{this.props.children}</div>;

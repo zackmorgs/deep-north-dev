@@ -420,6 +420,9 @@ h1 + .subtitle {
   font-weight: 600;
   text-transform: lowercase; }
 
+[class*='hidden'] {
+  display: none; }
+
 html {
   font-size: 18px;
   color: white;

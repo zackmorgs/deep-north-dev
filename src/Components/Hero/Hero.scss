@@ -3,8 +3,25 @@
   margin: 0;
   // border: 8px solid white;
   opacity:0.0;
+  background: black;
+  transform: translateY(-80%);
+
+  border-top:1px solid rgba(255,255,255,0.3);
+
   &.is-loaded {
+    border-top:8px solid rgba(255,255,255,1.0);
+    transform: translateY(0);
     opacity:1.0;
-    transition:opacity ease-in-out 1.618s;
+    transition:opacity, transform ease-in-out 1.618s;
   }
+}
+
+.hero {
+
+}
+
+.hero-front,
+.hero-bg {
+
+  top:0;
 }

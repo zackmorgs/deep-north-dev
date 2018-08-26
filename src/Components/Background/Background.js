@@ -68,14 +68,10 @@ export class Blueprint extends Component {
     console.log('should probably change gridXinterval +')
   }
 
-  generateBluepring () {
-    
-
-  }
 
   render () {
     return (
-      <div id='blueprint' onLoad={this.generateBluepring.bind()}>
+      <div id='blueprint'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           viewBox={'0 0 ' + this.state.gridHeight + ' ' + this.state.gridWidth}
@@ -87,7 +83,7 @@ export class Blueprint extends Component {
             right: 0
           }}
         >
-          <line y1={0} y2={100} x1={50} x2={50} stroke-width={8} stroke-color={'white'}/>
+          <line y1={0} y2={100} x1={50} x2={50} strokeWidth={8} color='white'/>
         </svg>
       </div>
     );

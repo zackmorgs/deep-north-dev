@@ -26,7 +26,7 @@ let Navigation = props => {
       className={
         !(typeof props !== props.className.length)
           ? 'nav-container'
-          : 'nav-container `${props.className}`'
+          : 'nav-container' + ' ' + props.className
       }
     >
       {props.children}
@@ -48,11 +48,9 @@ export default class Website extends Component {
     super(props);
     this.state = {
       isLoaded: false,
-      currentPage: 'Home'
+      currentPage: 'Home',
+      showFullNavigation: false
     };
-  }
-  handleMenuItemClick () {
-    console.log('handled.');
   }
 
   componentDidMount () {
@@ -60,71 +58,56 @@ export default class Website extends Component {
       isLoaded: true
     });
   }
+  handleNavigationToggle () {
+    console.log('toggle nav');
+    this.state.showFullNavigation
+      ? this.setState({
+        stateshowFullNavigation: false
+      })
+      : this.setState({
+        stateshowFullNavigation: true
+      });
+  }
   render () {
-    // let Container = {
-    //   CssClass: 'container'
-    // };
-
-    // this.state.isLoaded
-    //   ? (Container.CssClass = this.props.className + ' is-loaded')
-    //   : (Container.CssClass = this.props.className + ' is-loading');
-
+    console.log(this.state);
     return (
       <Container id='deep-north'>
         <Background Angle={0} Width={24} Height={24} />
         <Frame>
           <Router>
-            <Page className='page'>
-              <Navigation className='nav-home'>
+            <React.Fragment>
+              <div
+                className='nav-toggle'
+                onClick={this.handleNavigationToggle.bind(this)}
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='24'
+                  height='24'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                  stroke='currentColor'
+                  strokeWidth='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  className='feather feather-menu'
+                >
+                  <line x1='3' y1='12' x2='21' y2='12' />
+                  <line x1='3' y1='6' x2='21' y2='6' />
+                  <line x1='3' y1='18' x2='21' y2='18' />
+                </svg>
+              </div>
+
+              <Navigation
+                id='nav-home'
+                className={this.state.showFullNavigation ? '' : 'nav-hidden'}
+              >
                 <NavList>
                   <NavItem>
-                    <NavLink
-                      className='nav-link'
-                      to={'/'}
-                      component={Home}
-                      onClick={this.handleMenuItemClick.bind(this)}
-                      onSelect={console.log('selected `${this}`')}
-                    >
-                      <div className='icon'>
-                        <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          width='24'
-                          height='24'
-                          viewBox='0 0 24 24'
-                          fill='none'
-                          stroke='currentColor'
-                          stroke-width='2'
-                          stroke-linecap='round'
-                          stroke-linejoin='round'
-                          class='feather feather-home'
-                        >
-                          <path d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z' />
-                          <polyline points='9 22 9 12 15 12 15 22' />
-                        </svg>
-                      </div>
-                      <span className='caption'>Home</span>
-                    </NavLink>
-                  </NavItem>
-                  <li>
-                    <NavLink
-                      className='nav-link'
-                      to={'/'}
-                      component={About}
-                      onClick={this.handleMenuItemClick.bind(this)}
-                    >
-                      <span className='caption'>About</span>
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      className='nav-link'
-                      to={'/'}
-                      component={Contact}
-                      onClick={this.handleMenuItemClick.bind(this)}
-                    >
+                    <NavLink className='nav-link' to={'/'} component={Contact}>
                       <span className='caption'>Contact</span>
                     </NavLink>
-                  </li>
+                  </NavItem>
                 </NavList>
               </Navigation>
 
@@ -134,10 +117,51 @@ export default class Website extends Component {
                 <Route path='/contact' component={Contact} />
                 <Route path='/services' component={Services} />
               </main>
-            </Page>
+            </React.Fragment>
           </Router>
         </Frame>
       </Container>
+    );
+  }
+}
+
+class iconBriefcase extends Component {
+  render () {
+    return (
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='24'
+        height='24'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        strokeWidth='2'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        className='feather feather-briefcase'
+      >
+        <rect x='2' y='7' width='20' height='14' rx='2' ry='2' />
+        <path d='M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16' />
+      </svg>
+    );
+  }
+}
+
+class iconHome extends Component {
+  render () {
+    return (
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='24'
+        height='24'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        strokeWidth='2'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        className='feather feather-home'
+      />
     );
   }
 }

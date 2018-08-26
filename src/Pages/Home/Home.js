@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import Nav from './../../Components/Nav/Nav';
-import Page from './../../Components/Page/Page';
+import './Home.css';
+
+import Logo from './../../Components/Logo/Logo';
 import Services from './../../Components/Services/Services';
+
+import Page from './../../Components/Page/Page';
 import Hero, { HeroForeground, HeroBackground } from './../../Components/Hero/Hero';
 import TextCarousel from './../../Components/ImageCarousel/ImageCarousel';
 import ImageCarousel, {
   Slide
 } from './../../Components/ImageCarousel/ImageCarousel';
-import Logo from './../../Components/Logo/Logo';
+
+
 // import ImageWall from './../../Components/ImageWall/ImageWall';
-import './Home.css';
 // import logo from './../../Components/../svg/logo-colorized.svg';
 
-// import Images from './../../Components/../Data/image-list.json';
+import Images from './../../Components/../Data/image-list.json';
+import CarouselImageList from './../../Components/../Data/image-list.json';
 
 class Home extends Component {
   constructor (props) {
@@ -32,21 +36,7 @@ class Home extends Component {
             <ImageCarousel>
 
               <Slide>
-                <ImageCarousel>
-                  <img src="" alt=""/>  
-                </ImageCarousel>
-              </Slide>
-
-              <Slide>
-                <ImageCarousel>
-                  <img src="" alt=""/>  
-                </ImageCarousel>
-              </Slide>
-
-              <Slide>
-                <ImageCarousel>
-                  <img src="" alt=""/>
-                </ImageCarousel>
+                <img src="" alt=""/>
               </Slide>
 
             </ImageCarousel>

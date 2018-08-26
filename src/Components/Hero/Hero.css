@@ -1,7 +1,16 @@
 .hero {
   padding: 0;
   margin: 0;
-  opacity: 0.0; }
+  opacity: 0.0;
+  background: black;
+  transform: translateY(-80%);
+  border-top: 1px solid rgba(255, 255, 255, 0.3); }
   .hero.is-loaded {
+    border-top: 8px solid white;
+    transform: translateY(0);
     opacity: 1.0;
-    transition: opacity ease-in-out 1.618s; }
+    transition: opacity, transform ease-in-out 1.618s; }
+
+.hero-front,
+.hero-bg {
+  top: 0; }
