@@ -1,11 +1,15 @@
 #logo {
   display: block;
   padding: 0 1rem 0;
-  position: relative;
-  top: -2rem;
   width: 100%;
-  max-width: 316px;
+  max-width: 228px;
   margin: 0 auto; }
+
+footer {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0; }
 
 /* (iPhone 5 Portrait [320px]) */
 /* iPhone 6 and above */

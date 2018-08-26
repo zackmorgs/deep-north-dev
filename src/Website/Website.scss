@@ -3,6 +3,8 @@
 html {
   font-size: 18px;
   color: white;
+
+  -webkit-font-smoothing: antialiased;
 }
 #root {
   background: radial-gradient(

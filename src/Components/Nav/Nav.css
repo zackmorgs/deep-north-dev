@@ -5,32 +5,26 @@
   position: sticky;
   bottom: 0;
   z-index: 1; }
-
-#main-menu ul {
-  display: flex;
-  justify-content: space-between; }
-
-#main-menu li {
-  display: block; }
-
-#main-menu a {
-  text-decoration: none;
-  text-align: center;
-  font-size: 2rem;
-  text-transform: capitalize;
-  color: white;
-  display: block;
-  padding: .5rem .25rem; }
-
-#main-menu a:active {
-  color: #d7a03d; }
-
-#main-menu span {
-  display: none; }
-
-#main-menu .icon {
-  padding: 0.5rem;
-  display: block; }
+  #main-menu ul {
+    display: flex;
+    justify-content: space-between; }
+  #main-menu li {
+    display: block; }
+  #main-menu a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: white;
+    display: block;
+    padding: .5rem .25rem; }
+    #main-menu a:active {
+      color: #d7a03d; }
+  #main-menu span {
+    display: none; }
+  #main-menu .icon {
+    padding: 0.5rem;
+    display: block; }
 
 /* (iPhone 5 Portrait [320px]) */
 /* iPhone 6 and above */

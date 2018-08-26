@@ -1,5 +1,10 @@
 .hero {
-  padding:2rem 0;
-  // margin:10px;
-  border-bottom:8px solid white;
+  padding:0;
+  margin: 0;
+  // border: 8px solid white;
+  opacity:0.0;
+  &.is-loaded {
+    opacity:1.0;
+    transition:opacity ease-in-out 1.618s;
+  }
 }

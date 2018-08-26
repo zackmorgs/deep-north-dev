@@ -41,4 +41,5 @@ var ls = require('ls');
   }
   console.log(']');
 })(ls);
-return 0;
+
+

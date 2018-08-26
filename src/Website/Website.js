@@ -12,13 +12,35 @@ import About from '../Pages/Home/Home';
 import Contact from '../Pages/Home/Home';
 import Services from '../Pages/Home/Home';
 
-
 // components
 import Container from '../Components/Container/Container';
 import Background from '../Components/Background/Background';
 import Frame from '../Components/Frame/Frame';
 // import Nav from '../Components/Nav/Nav';
 import Page from '../Components/Page/Page';
+
+// nav : teeny functional componenets tee hee
+let Navigation = props => {
+  return (
+    <nav
+      className={
+        !(typeof props !== props.className.length)
+          ? 'nav-container'
+          : 'nav-container `${props.className}`'
+      }
+    >
+      {props.children}
+    </nav>
+  );
+};
+
+let NavList = props => {
+  return <ul className='nav-list'>{props.children}</ul>;
+};
+
+let NavItem = props => {
+  return <li className='nav-item'>{props.children}</li>;
+};
 
 // go
 export default class Website extends Component {
@@ -53,9 +75,9 @@ export default class Website extends Component {
         <Frame>
           <Router>
             <Page className='page'>
-              <nav className='nav-container'>
-                <ul>
-                  <li>
+              <Navigation className='nav-home'>
+                <NavList>
+                  <NavItem>
                     <NavLink
                       className='nav-link'
                       to={'/'}
@@ -63,9 +85,26 @@ export default class Website extends Component {
                       onClick={this.handleMenuItemClick.bind(this)}
                       onSelect={console.log('selected `${this}`')}
                     >
+                      <div className='icon'>
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          width='24'
+                          height='24'
+                          viewBox='0 0 24 24'
+                          fill='none'
+                          stroke='currentColor'
+                          stroke-width='2'
+                          stroke-linecap='round'
+                          stroke-linejoin='round'
+                          class='feather feather-home'
+                        >
+                          <path d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z' />
+                          <polyline points='9 22 9 12 15 12 15 22' />
+                        </svg>
+                      </div>
                       <span className='caption'>Home</span>
                     </NavLink>
-                  </li>
+                  </NavItem>
                   <li>
                     <NavLink
                       className='nav-link'
@@ -86,8 +125,8 @@ export default class Website extends Component {
                       <span className='caption'>Contact</span>
                     </NavLink>
                   </li>
-                </ul>
-              </nav>
+                </NavList>
+              </Navigation>
 
               <main>
                 <Route exactPath='/' component={Home} />

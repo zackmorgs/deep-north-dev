@@ -2,10 +2,8 @@
   text-align: center;
   background: red;
   padding: 1rem; }
-
-.services li {
-  display: inline-block;
-  padding: .1rem .25rem; }
-
-.services li:after {
-  content: ','; }
+  .services li {
+    display: inline-block;
+    padding: .1rem .25rem; }
+    .services li:after {
+      content: ','; }

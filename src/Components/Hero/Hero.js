@@ -23,8 +23,36 @@ export class Hero extends Component {
       ? (Element.cssClass += ' is-loaded')
       : console.log('loading');
 
-    return <div className={Element.cssClass}>{this.props.children}</div>;
+    return <div className={Element.cssClass}>
+      {this.props.children}
+    </div>;
   }
 }
 
+export class HeroBackground extends Component {
+  constructor(props) {
+    super(props)
+  }
+
+  render(){
+    return (
+      <div className='hero-bg'>
+        {this.props.children}
+      </div>
+    );
+  }
+}
+export class HeroForeground extends Component {
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    return (
+      <div className='hero-front'>
+        {this.props.children}
+      </div>
+    );
+  }
+}
 export default Hero;

@@ -8,6 +8,9 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import Website from './Website/Website';
 
+// var typeset = require('typeset');
+// missing jquery it says lol
+// typeset(ReactDOM.render(<Website />, document.getElementById('root')));
 ReactDOM.render(<Website />, document.getElementById('root'));
 
 registerServiceWorker();

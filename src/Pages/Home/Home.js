@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-// import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 
-import Page from './../../Components/Page/Page';
 import Nav from './../../Components/Nav/Nav';
+import Page from './../../Components/Page/Page';
 import Services from './../../Components/Services/Services';
-import Hero from './../../Components/Hero/Hero';
+import Hero, { HeroForeground, HeroBackground } from './../../Components/Hero/Hero';
+import TextCarousel from './../../Components/ImageCarousel/ImageCarousel';
+import ImageCarousel, {
+  Slide
+} from './../../Components/ImageCarousel/ImageCarousel';
 import Logo from './../../Components/Logo/Logo';
 // import ImageWall from './../../Components/ImageWall/ImageWall';
 import './Home.css';
@@ -21,19 +25,63 @@ class Home extends Component {
   }
   render () {
     return (
-      <div className={this.Container.CssClass}>
+      <Page className={this.Container.CssClass}>
         <Hero>
-          <h1>General Contractors</h1>
-          <span className='subtitle'>Odd-job specialists</span>
+          {/* Image backgrounds */}
+          <HeroBackground>
+            <ImageCarousel>
+
+              <Slide>
+                <ImageCarousel>
+                  <img src="" alt=""/>  
+                </ImageCarousel>
+              </Slide>
+
+              <Slide>
+                <ImageCarousel>
+                  <img src="" alt=""/>  
+                </ImageCarousel>
+              </Slide>
+
+              <Slide>
+                <ImageCarousel>
+                  <img src="" alt=""/>
+                </ImageCarousel>
+              </Slide>
+
+            </ImageCarousel>
+          </HeroBackground>
+
+          {/* Front text */}
+          <HeroForeground>
+
+            <TextCarousel>
+              <h1>General Contractors</h1>
+              <span className='subtitle'>Odd-job specialists</span>
+            </TextCarousel>
+
+            <TextCarousel>
+              <h1>A team you can trust</h1>
+              <span className='subtitle'>Odd-job specialists</span>
+            </TextCarousel>
+
+            <TextCarousel>
+              <h1>General Contractors</h1>
+              <span className='subtitle'>Odd-job specialists</span>
+            </TextCarousel>
+
+          </HeroForeground>
+
         </Hero>
         {/* {this.props.children} */}
 
         <footer>
           <Logo />
         </footer>
-      </div>
+      </Page>
     );
   }
 }
 
 export default Home;
+
