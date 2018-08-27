@@ -29,9 +29,13 @@ export class Background extends Component {
     // ill probably animate the gridlines if i have time.
 
     return (
-      <div className={this.state.isLoaded
-        ? (Container.cssClass = 'bg')
-        : (Container.cssClass = 'bg loading')}>
+      <div
+        className={
+          this.state.isLoaded
+            ? (Container.cssClass = 'bg')
+            : (Container.cssClass = 'bg loading')
+        }
+      >
         <Blueprint>{this.props.children}</Blueprint>
       </div>
     );
@@ -62,16 +66,15 @@ export class Blueprint extends Component {
     // this.setState = {};
   }
   componentDidUpdate () {
-    console.log('should probably change gridXinterval +')
+    console.log('should probably change gridXinterval +');
   }
-
 
   render () {
     return (
       <div id='blueprint'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
-          viewBox={'0 0 ' + this.state.gridHeight + ' ' + this.state.gridWidth}
+          viewBox={'0 0 ' + this.state.gridWidth + ' ' + this.state.gridHeight}
           style={{
             position: 'absolute',
             top: 0,
@@ -80,7 +83,7 @@ export class Blueprint extends Component {
             right: 0
           }}
         >
-          <line y1={0} y2={100} x1={50} x2={50} strokeWidth={8} color='white'/>
+          <line y1={20} y2={80} x1={20} x2={20} strokeWidth={8} color='black' />
         </svg>
       </div>
     );

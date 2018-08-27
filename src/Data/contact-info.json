@@ -2,7 +2,11 @@
   "contactInfo": [
     {
       "contactName": "Phone",
-      "value": "647-717-5252"
+      "value": "647-717-5252",
+      "svgIcon" :
+    },
+    {
+      ""
     }
   ]
 }

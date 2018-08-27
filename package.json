@@ -22,20 +22,19 @@
     "serve": "^9.6.0"
   },
   "scripts": {
-    "real-start": "npm-run-all -p make-image-gallery build-css react-start watch-css ",
-    "start": "npm-run-all -p build-css react-start watch-css ",
+    "start": "npm-run-all -p dev-scripts react-start watch-css",
     "story": "getstorybook",
-    "make-image-carousels" : "get-carousel-images.bat",
-    "make-image-gallery": "get-images.bat",
+    "dev-scripts" : "npm-run-all -p make-lists build-css",
+    "build-scripts" : "npm-run-all -p make-lists build-css build",
+    "make-lists" : "npm-run-all -p make-carousel-json make-instagram-json",
+    "make-carousel-json" : "node ./get-carousel-images >> ./src/Data/carousel-list.json",
+    "make-instagram-json": "node ./get-images >> ./src/Data/image-list.json",
     "react-start": "react-scripts start",
     "build-css": "node-sass src/ -o src/  -r",
     "watch-css": "node-sass src/ -o src/ -r -w",
-    "wat": "which react-scripts",
     "build": "react-scripts build",
-    "build-all": "npm run-script make-image-gallery && react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "start-server": "serve -s build"
+    "eject": "react-scripts eject"
   },
   "devDependencies": {
     "babel-preset-env": "^1.7.0"

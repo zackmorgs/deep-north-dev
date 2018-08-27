@@ -10,12 +10,9 @@ export class Hero extends Component {
     };
   }
   componentDidMount () {
-    window.setTimeout(
-      this.setState({
-        isLoaded: true
-      }),
-      500
-    );
+    this.setState({
+      isLoaded: true
+    });
   }
   render () {
     let Element = {

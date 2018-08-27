@@ -1,6 +1,8 @@
 // todo
 
-
+#nav-home {
+  display:flex;
+}
 
 .nav-container {
   font-family: Montserrat;
@@ -8,6 +10,7 @@
     display: block;
   }
 }
+
 .nav-list {
   display: flex;
   width: 100%;

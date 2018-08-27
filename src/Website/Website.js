@@ -19,20 +19,21 @@ import Frame from '../Components/Frame/Frame';
 // import Nav from '../Components/Nav/Nav';
 import Page from '../Components/Page/Page';
 
-// nav : teeny functional componenets tee hee
-let Navigation = props => {
-  return (
-    <nav
-      className={
-        !(typeof props !== props.className.length)
-          ? 'nav-container'
-          : 'nav-container' + ' ' + props.className
-      }
-    >
-      {props.children}
-    </nav>
-  );
-};
+class Navigation extends Component {
+  render() {
+    return (
+      <nav
+        {... this.props}
+      >
+        {this.props.children}
+      </nav>
+    );
+  }
+
+}
+Navigation.defaultProps = {
+  className: 'nav-container'
+}
 
 let NavList = props => {
   return <ul className='nav-list'>{props.children}</ul>;
@@ -61,7 +62,7 @@ export default class Website extends Component {
   handleNavigationToggle () {
     console.log('toggle nav', this.state.showFullNavigation);
 
-    this.state.showFullNavigation
+    (this.state.showFullNavigation)
       ? this.setState({
         stateshowFullNavigation: false
       })
@@ -77,32 +78,34 @@ export default class Website extends Component {
         <Frame>
           <Router>
             <React.Fragment>
-              <div
-                className='nav-toggle'
-                onClick={this.handleNavigationToggle.bind(this)}
-              >
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width='24'
-                  height='24'
-                  viewBox='0 0 24 24'
-                  fill='none'
-                  stroke='currentColor'
-                  strokeWidth='2'
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  className='feather feather-menu'
-                >
-                  <line x1='3' y1='12' x2='21' y2='12' />
-                  <line x1='3' y1='6' x2='21' y2='6' />
-                  <line x1='3' y1='18' x2='21' y2='18' />
-                </svg>
-              </div>
+
 
               <Navigation
                 id='nav-home'
                 className={this.state.showFullNavigation ? '' : 'nav-hidden'}
               >
+                <div
+                  className='nav-toggle'
+                  onClick={this.handleNavigationToggle.bind(this)}
+                >
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='24'
+                    height='24'
+                    viewBox='0 0 24 24'
+                    fill='none'
+                    stroke='currentColor'
+                    strokeWidth='2'
+                    className='feather feather-menu'
+                  >
+                    {/* strokeLinecap='round'
+                  strokeLinejoin='round' */}
+                    <line x1='3' y1='12' x2='21' y2='12' />
+                    <line x1='3' y1='6' x2='21' y2='6' />
+                    <line x1='3' y1='18' x2='21' y2='18' />
+                  </svg>
+
+                </div>
                 <NavList>
                   <NavItem>
                     <NavLink className='nav-link' to={'/'} component={Contact}>
@@ -112,7 +115,7 @@ export default class Website extends Component {
                 </NavList>
               </Navigation>
 
-              <main>
+              <main id='route-container'>
                 <Route exactPath='/' component={Home} />
                 <Route path='/about' component={About} />
                 <Route path='/contact' component={Contact} />
