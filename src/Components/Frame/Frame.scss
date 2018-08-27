@@ -1,14 +1,18 @@
 .frame {
   display:block;
+
   position: absolute;
   top:0;
   left:0;
   right:0;
   bottom:0;
+
+
   margin:10px 8px;
-  padding:1rem;
-  border:8px solid white;
+
+  padding: .5rem;
+
+  border:.5rem solid white;
+
   overflow-y:scroll;
-
-
 }

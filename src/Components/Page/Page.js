@@ -9,19 +9,19 @@ export class Page extends Component {
     };
   }
   componentDidMount() {
-    console.log('Page : componentDidMount()', this.state);
+    console.log('Page : componentDidMount() Mounted', this.state);
     this.setState({
       isLoaded: true
     });
   }
   componentWillMount(){
-    console.log('Page : componentWillMount()', this.state);
+    console.log('Page : componentWillMount() : Mounting', this.state);
   }
   componentWillUpdate() {
     console.log('Page : componentWillUpdate()', this.state)
   }
   componentDidUpdate(){
-    console.log('Page : updating...', this.state);
+    console.log('Page : Updated.', this.state);
   }
   componentWillUnmount(){
     console.log('Page : componentWillUnmount()', this.state)

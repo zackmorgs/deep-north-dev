@@ -1,40 +1,39 @@
 // todo
 
-#nav-home {
-  display:flex;
-}
-
 .nav-container {
   font-family: Montserrat;
-  li {
-    display: block;
+  margin-bottom: 1rem;
+}
+.nav-toggle {
+  margin-left: auto;
+  // margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+  svg {
+    height: 3rem;
+    width: 4rem;
+    margin-left:auto;
+    // margin-top:4px;
   }
 }
-
 .nav-list {
   display: flex;
   width: 100%;
-  align-content: center;
-  justify-content: space-between;
+  // align-content: center;
+  // justify-content: space-between;
 }
-// .nav-link & .nav-link:visited {
-//   color: white;
-// }
+.nav-link {
 
+}
 .nav-link,
-.nav-toggle {
+.nav-toggle svg {
   text-decoration: none;
   display: block;
   border: 8px solid white;
-  height: 4.44rem;
-  width: 4.44rem;
   text-decoration: none;
-  display: block;
   border: 4px solid white;
-  height: 42px;
-  width: 96px;
   .caption {
-    display: none;
+    display:block;
     color: white;
     margin: 0 auto;
     text-align: center;
@@ -42,7 +41,6 @@
   }
   .icon {
     text-align: center;
-    vertical-align: baseline;
     display: block;
     svg {
       color: white;
@@ -51,15 +49,5 @@
   }
 }
 
-.nav-toggle {
-  margin-left: auto;
-  margin-bottom: 1rem;
-  text-align: center;
-  height: 3rem;
-  width: 4rem;
-  svg {
-    // margin-top:4px;
-        width: 100%;
-    height: 100%;
-  }
-}
+
+

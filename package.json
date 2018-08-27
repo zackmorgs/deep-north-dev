@@ -12,6 +12,7 @@
     "npm-run-all": "^4.1.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-feather": "^1.1.1",
     "react-responsive-carousel": "^3.1.41",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
@@ -24,16 +25,13 @@
   "scripts": {
     "start": "npm-run-all -p dev-scripts react-start watch-css",
     "story": "getstorybook",
-    "dev-scripts" : "npm-run-all -p make-lists build-css",
-    "build-scripts" : "npm-run-all -p make-lists build-css build",
-    "make-lists" : "npm-run-all -p make-carousel-json make-instagram-json",
-    "make-carousel-json" : "node ./get-carousel-images >> ./src/Data/carousel-list.json",
-    "make-instagram-json": "node ./get-images >> ./src/Data/image-list.json",
+    "dev-scripts": "npm-run-all -p make-lists build-css",
+    "build-scripts": "npm-run-all -p make-lists build-css build",
+    "make-lists": "node ./get-images.js",
     "react-start": "react-scripts start",
     "build-css": "node-sass src/ -o src/  -r",
     "watch-css": "node-sass src/ -o src/ -r -w",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
