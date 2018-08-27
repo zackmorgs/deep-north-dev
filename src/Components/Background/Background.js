@@ -26,15 +26,12 @@ export class Background extends Component {
     let Container = {
       cssClass: 'bg'
     };
-
-    this.state.isLoaded
-      ? (Container.cssClass = 'bg')
-      : (Container.cssClass = 'bg');
     // ill probably animate the gridlines if i have time.
 
     return (
-      //
-      <div className={Container.cssClass}>
+      <div className={this.state.isLoaded
+        ? (Container.cssClass = 'bg')
+        : (Container.cssClass = 'bg loading')}>
         <Blueprint>{this.props.children}</Blueprint>
       </div>
     );

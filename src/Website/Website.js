@@ -59,7 +59,8 @@ export default class Website extends Component {
     });
   }
   handleNavigationToggle () {
-    console.log('toggle nav');
+    console.log('toggle nav', this.state.showFullNavigation);
+
     this.state.showFullNavigation
       ? this.setState({
         stateshowFullNavigation: false
@@ -69,7 +70,7 @@ export default class Website extends Component {
       });
   }
   render () {
-    console.log(this.state);
+    console.log('Website.js render() :|','State:',this.state);
     return (
       <Container id='deep-north'>
         <Background Angle={0} Width={24} Height={24} />

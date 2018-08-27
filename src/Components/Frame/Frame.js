@@ -21,7 +21,7 @@ export class Frame extends Component {
 
     this.state.isLoaded
       ? (Element.cssClass += ' is-loaded')
-      : console.log('loading');
+      : console.log('Frame.js render() :| .is-loaded');
 
     return <div className={Element.cssClass}>{this.props.children}</div>;
   }

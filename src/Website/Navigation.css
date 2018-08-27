@@ -1,12 +1,3 @@
-.nav-toggle {
-  margin-left: auto;
-  margin-bottom: 1rem;
-  text-align: center; }
-
-.nav-toggle svg {
-  width: 100;
-  height: 100%; }
-
 .nav-container {
   font-family: Montserrat; }
 
@@ -50,3 +41,14 @@
 .nav-toggle .icon svg {
   color: white;
   transform: translateY(1px); }
+
+.nav-toggle {
+  margin-left: auto;
+  margin-bottom: 1rem;
+  text-align: center;
+  height: 3rem;
+  width: 4rem; }
+
+.nav-toggle svg {
+  width: 100%;
+  height: 100%; }

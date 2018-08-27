@@ -18,7 +18,7 @@ import ImageCarousel, {
 // import logo from './../../Components/../svg/logo-colorized.svg';
 
 import Images from './../../Components/../Data/image-list.json';
-import CarouselImageList from './../../Components/../Data/image-list.json';
+import CarouselImageList from './../../Components/../Data/carousel-list.json';
 
 class Home extends Component {
   constructor (props) {
@@ -32,18 +32,23 @@ class Home extends Component {
       <Page className={this.Container.CssClass}>
         <Hero>
           {/* Image backgrounds */}
+
           <HeroBackground>
             <ImageCarousel>
-
-              <Slide>
-                <img src="" alt=""/>
-              </Slide>
-
+              {
+                CarouselImageList.map((CarouselImage, Index)=>{
+                  return (
+                    <Slide key={Index}>
+                      <img src={CarouselImage} alt="Deep North Contracting" className='carousel-img' />
+                    </Slide>
+                  );
+                })
+              }
             </ImageCarousel>
           </HeroBackground>
 
           {/* Front text */}
-          <HeroForeground>
+          {/* <HeroForeground>
 
             <TextCarousel>
               <h1>General Contractors</h1>
@@ -60,7 +65,7 @@ class Home extends Component {
               <span className='subtitle'>Odd-job specialists</span>
             </TextCarousel>
 
-          </HeroForeground>
+          </HeroForeground> */}
 
         </Hero>
         {/* {this.props.children} */}

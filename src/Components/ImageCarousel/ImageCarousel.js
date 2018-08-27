@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import './ImageCarousel.css';
+
 export class ImageCarousel extends Component {
   constructor (props) {
     super(props);
@@ -13,23 +15,31 @@ export class ImageCarousel extends Component {
 
   }
   componentDidMount () {
-    this.setState({
-      isLoaded: true
-    });
+
   }
-  componentWillReceiveProps (nextProps) {}
+  componentWillReceiveProps (nextProps) {
 
-  shouldComponentUpdate (nextProps, nextState) {}
+  }
 
-  componentWillUpdate (nextProps, nextState) {}
+  shouldComponentUpdate (nextProps, nextState) {
 
-  componentDidUpdate (prevProps, prevState) {}
+  }
 
-  componentWillUnmount () {}
+  componentWillUpdate (nextProps, nextState) {
+
+  }
+
+  componentDidUpdate (prevProps, prevState) {
+
+  }
+
+  componentWillUnmount () {
+
+  }
 
   render () {
     return (
-      <div className={this.state.isLoaded ? 'carousel-container' : 'carousel-container loading'}>
+      <div className='carousel-container'>
         {this.props.children}
       </div>
     );
@@ -49,6 +59,6 @@ export class Slide extends Component {
 
   }
   render () {
-    return <div className='carousel-img'>{this.props.children}</div>;
+    return <div className='carousel-slide'>{this.props.children}</div>;
   }
 }

@@ -22,16 +22,17 @@
     "serve": "^9.6.0"
   },
   "scripts": {
-    "real-start": "npm-run-all -p get-image-list build-css react-start watch-css ",
+    "real-start": "npm-run-all -p make-image-gallery build-css react-start watch-css ",
     "start": "npm-run-all -p build-css react-start watch-css ",
     "story": "getstorybook",
-    "get-image-list": "get-images.bat",
+    "make-image-carousels" : "get-carousel-images.bat",
+    "make-image-gallery": "get-images.bat",
     "react-start": "react-scripts start",
     "build-css": "node-sass src/ -o src/  -r",
     "watch-css": "node-sass src/ -o src/ -r -w",
     "wat": "which react-scripts",
     "build": "react-scripts build",
-    "build-all": "npm run-script get-image-list && react-scripts build",
+    "build-all": "npm run-script make-image-gallery && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "start-server": "serve -s build"

@@ -5,11 +5,12 @@
   background: black;
   transform: translateY(-80%);
   border-top: 1px solid rgba(255, 255, 255, 0.3); }
-  .hero.is-loaded {
-    border-top: 8px solid white;
-    transform: translateY(0);
-    opacity: 1.0;
-    transition: opacity, transform ease-in-out 1.618s; }
+
+.hero.is-loaded {
+  border-top: 8px solid white;
+  transform: translateY(0);
+  opacity: 1.0;
+  transition: opacity, transform ease-in-out 1.618s; }
 
 .hero-front,
 .hero-bg {

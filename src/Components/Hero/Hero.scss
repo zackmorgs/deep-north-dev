@@ -8,6 +8,8 @@
 
   border-top:1px solid rgba(255,255,255,0.3);
 
+    // margin-left: -2rem;
+    // margin-right: -2rem;
   &.is-loaded {
     border-top:8px solid rgba(255,255,255,1.0);
     transform: translateY(0);
