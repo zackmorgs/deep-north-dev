@@ -1,5 +1,17 @@
-{
-  "paymentMethods" : [
-    "Visa", "Mastercard", "Cash", "Interac", "Amex"
-  ]
-}
+[
+  {
+    "method": "Visa"
+  },
+  {
+    "method": "Mastercard"
+  },
+  {
+    "method": "Cash"
+  },
+  {
+    "method": "Interac"
+  },
+  {
+    "method": "Amex"
+  }
+]

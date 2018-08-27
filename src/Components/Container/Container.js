@@ -3,32 +3,27 @@ import './Container.css';
 // import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 // components & contain data & link to pages
-// import Container from './../Components/Container/Container';
 
 export class Container extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
-
     this.state = {
       isLoaded: false
     };
   }
-
-  componentDidMount() {
+  componentDidMount () {
     this.setState({
       isLoaded: true
     });
   }
-
-  render() {
+  render () {
     let Element = {
-      CssClass: 'container'
+      CssClass: ''
     };
-
-    // this.state.isLoaded ? Container.CssClass += 'is-loaded' : console.log('loading');
-
-    return <div className={Element.CssClass}>{this.props.children}</div>;
+    return <div {...this.props}>{this.props.children}</div>;
   }
 }
-
+Container.defaultProps = {
+  className: 'container'
+};
 export default Container;

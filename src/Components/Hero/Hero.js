@@ -33,6 +33,9 @@ export class HeroBackground extends Component {
   }
 
   render () {
+    <componentDidMount>
+      {'test'}
+    </componentDidMount>
     return <div className='hero-bg'>{this.props.children}</div>;
   }
 }

@@ -1,49 +1,54 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+import AutoPlaySwipeableViews from 'react-swipeable-views';
+
+// componenet
 import './Home.css';
 
-import Logo from './../../Components/Logo/Logo';
-import Services from './../../Components/Services/Services';
+// data
+import CarouselImageList from './../../Components/../Data/carousel-list.json';
 
+// components
+import Logo from './../../Components/Logo/Logo';
 import Page from './../../Components/Page/Page';
-import Hero, { HeroForeground, HeroBackground } from './../../Components/Hero/Hero';
+import Hero, {
+  HeroForeground,
+  HeroBackground
+} from './../../Components/Hero/Hero';
 import TextCarousel from './../../Components/ImageCarousel/ImageCarousel';
 import ImageCarousel, {
   Slide
 } from './../../Components/ImageCarousel/ImageCarousel';
 
-
-// import ImageWall from './../../Components/ImageWall/ImageWall';
-// import logo from './../../Components/../svg/logo-colorized.svg';
-
-import Images from './../../Components/../Data/image-list.json';
-import CarouselImageList from './../../Components/../Data/carousel-list.json';
-
+// class Home extends Page {
+// ^ someday?
 class Home extends Component {
   constructor (props) {
     super(props);
-    this.Container = {
-      CssClass: 'page page-home'
-    };
   }
   render () {
     return (
-      <Page className={this.Container.CssClass}>
+      <Page>
         <Hero>
           {/* Image backgrounds */}
 
           <HeroBackground>
             <ImageCarousel>
-              {
-                CarouselImageList.map((CarouselImage, Index)=>{
+              <AutoPlaySwipeableViews>
+                {CarouselImageList.map((CarouselImage, Index) => {
                   return (
                     <Slide key={Index}>
-                      <img src={CarouselImage} alt="Deep North Contracting" className='carousel-img' />
+                      <img
+                        src={CarouselImage}
+                        alt='Deep North Contracting'
+                        className='carousel-img'
+                      />
                     </Slide>
                   );
-                })
-              }
+                })}
+                ;
+              </AutoPlaySwipeableViews>
             </ImageCarousel>
           </HeroBackground>
 
@@ -66,7 +71,6 @@ class Home extends Component {
             </TextCarousel>
 
           </HeroForeground> */}
-
         </Hero>
         {/* {this.props.children} */}
 
@@ -76,7 +80,17 @@ class Home extends Component {
       </Page>
     );
   }
+
+  componentDidMount () {
+    console.log('Page : componentDidMount() Mounted');
+    this.setState({
+      isLoaded: true
+    });
+  }
 }
 
-export default Home;
+Home.defaultProps = {
+  className: 'page-home'
+};
 
+export default Home;

@@ -1,23 +1,26 @@
 import React, { Component } from 'react';
-import './Website.css';
-import './Navigation.css';
 // lib
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 
+// ui
+import './Website.css';
+import './Navigation.css';
+
+import {Info, Mail, Briefcase } from 'react-feather';
+
 // data
+
 
 // pages
 import Home from '../Pages/Home/Home';
-import About from '../Pages/Home/Home';
-import Contact from '../Pages/Home/Home';
-import Services from '../Pages/Home/Home';
+import About from '../Pages/About/About';
+import Contact from '../Pages/Contact/Contact';
+import Services from '../Pages/Services/Services';
 
 // components
 import Container from '../Components/Container/Container';
 import Background from '../Components/Background/Background';
 import Frame from '../Components/Frame/Frame';
-// import Nav from '../Components/Nav/Nav';
-import Page from '../Components/Page/Page';
 
 // go
 export default class Website extends Component {
@@ -48,14 +51,15 @@ export default class Website extends Component {
     console.log('Website.js render() :|', 'State:', this.state);
     return (
       <Container id="deep-north">
-        <Background Angle={0} Width={24} Height={24} />
+        <Background />
         <Frame>
           <Router>
-            <React.Fragment>
+            <RouteContainer>
               {/* nav */}
-
-              <Navigation id="nav-home">
-                {console.log('Website.render()', this.state)}
+              <Navigation
+                id="nav-main"
+                className={this.state.menuOpen ? 'nav-open' : 'nav-closed'}
+              >
                 <div className="nav-toggle">
                   <div className="toggle-container">
                     <a className="toggle" onClick={this.handleClick}>
@@ -76,25 +80,39 @@ export default class Website extends Component {
                     </a>
                   </div>
                 </div>
-                <NavList>
-                  {/* className={this.state.menuOpen ? 'nav-show' : 'nav-hidden'} */}
+                <NavList
+                  className={this.state.menuOpen ? 'nav-show' : 'nav-hidden'}
+                >
                   <NavItem>
-                    <NavLink
-                      to={'/contact'}
-                      component={<span>Contact</span>}
-                    >
-                      <span className="caption">Contact Us</span>
+                    <NavLink to={'/'}>
+                      <div className="icon">
+                        <Info />
+                      </div>
+                      <span className="caption">Home</span>
                     </NavLink>
                   </NavItem>
-                  <NavItem
-                    className="nav-link"
-                    to={'/contact'}
-                    component={<span>Contact</span>}
-                  >
-                    <NavLink>
-                      <span className='caption'>
-                        About
-                      </span>
+                  <NavItem>
+                    <NavLink to={'/about'}>
+                      <div className="icon">
+                        <Info />
+                      </div>
+                      <span className="caption">About</span>
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink to={'/services'}>
+                      <div className="icon">
+                        <Briefcase />
+                      </div>
+                      <span className="caption">Services</span>
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink to={'/contact'}>
+                      <div className="icon">
+                        <Mail />
+                      </div>
+                      <span className="caption">Contact Us</span>
                     </NavLink>
                   </NavItem>
                 </NavList>
@@ -107,32 +125,10 @@ export default class Website extends Component {
                 <Route path="/contact" component={Contact} />
                 <Route path="/services" component={Services} />
               </main>
-            </React.Fragment>
+            </RouteContainer>
           </Router>
         </Frame>
       </Container>
-    );
-  }
-}
-
-class iconBriefcase extends Component {
-  render() {
-    return (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="feather feather-briefcase"
-      >
-        <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-      </svg>
     );
   }
 }
@@ -155,20 +151,21 @@ class iconHome extends Component {
     );
   }
 }
-
-class Navigation extends Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return <nav {...this.props}>{this.props.children}</nav>;
-  }
-}
-
+// i made this cause react-router shouted at me and told me to return one component to it so fine there ya go.
+let RouteContainer = props => {
+  return <div {...props}>{props.children}</div>;
+};
+RouteContainer.defaultProps = {
+  className: 'route-container'
+};
+// Navigation ie .nav-container
+let Navigation = props => {
+  return <nav {...props}>{props.children}</nav>;
+};
 Navigation.defaultProps = {
   className: 'nav-container'
 };
-
+// NavList
 let NavList = props => {
   return <ul {...props}>{props.children}</ul>;
 };
@@ -179,10 +176,16 @@ NavList.defaultProps = {
 let NavItem = props => {
   return <li {...props}>{props.children}</li>;
 };
+
 NavItem.defaultProps = {
   className: 'nav-item'
 };
 
+// NavLink defined by react-router
 NavLink.defaultProps = {
-  className: 'nav-link'
+  className: 'nav-link',
+  activeClassName: 'link-selected',
+  onClick: ()=>{
+    console.log('clicked')
+  }
 };

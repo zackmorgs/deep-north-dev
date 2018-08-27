@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import './Page.css';
 
 export class Page extends Component {
@@ -9,31 +10,41 @@ export class Page extends Component {
     };
   }
   componentDidMount() {
-    console.log('Page : componentDidMount() Mounted', this.state);
+    console.log('Page : componentDidMount() Mounted');
     this.setState({
       isLoaded: true
     });
   }
   componentWillMount(){
-    console.log('Page : componentWillMount() : Mounting', this.state);
+    console.log('Page : componentWillMount() : Mounting')
   }
   componentWillUpdate() {
-    console.log('Page : componentWillUpdate()', this.state)
+    console.log('Page : componentWillUpdate()')
   }
   componentDidUpdate(){
-    console.log('Page : Updated.', this.state);
+    console.log('Page : Updated.');
   }
+
   componentWillUnmount(){
-    console.log('Page : componentWillUnmount()', this.state)
+    console.log('Page : componentWillUnmount()');
   }
 
   render() {
+    console.log('Page : render()');
     return (
-      <div id='page-container' className={ this.state.isLoaded ? ('loaded') : ('loading') }>
-        {this.props.children}
-      </div>
+      this.state.isLoaded ? (
+        <div {...this.props}>
+          {this.props.children}
+        </div >
+      ) : (
+          <div {...this.props}>
+    { this.props.children }
+      </div >
+      )
     );
   }
 }
-
+Page.defaultProps = {
+  className: 'page page-loading'
+}
 export default Page;

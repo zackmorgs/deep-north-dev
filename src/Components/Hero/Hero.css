@@ -5,10 +5,11 @@
   background: black;
   transform: translateY(-80%);
   border: 4px solid white; }
-  .hero.is-loaded {
-    transform: translateY(0);
-    opacity: 1.0;
-    transition: opacity, transform ease-in-out 1.618s; }
+
+.hero.is-loaded {
+  transform: translateY(0);
+  opacity: 1.0;
+  transition: opacity, transform ease-in-out 1.618s; }
 
 .hero-front,
 .hero-bg {

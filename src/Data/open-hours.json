@@ -1,8 +1,27 @@
-{
-  "openHours" : [
-    {
-      "day" : "monday",
-      "hours" : ""
-    }
-  ]
-}
+[
+  {
+    "dayOfWeek": "Monday",
+    "startHour": "9:00am",
+    "endHour": "5:00pm"
+  },
+  {
+    "dayOfWeek": "Tuesday",
+    "startHour": "9:00am",
+    "endHour": "5:00pm"
+  },
+  {
+    "dayOfWeek": "Wednesday",
+    "startHour": "9:00am",
+    "endHour": "5:00pm"
+  },
+  {
+    "dayOfWeek": "Thursday",
+    "startHour": "9:00am",
+    "endHour": "5:00pm"
+  },
+  {
+    "dayOfWeek": "Friday",
+    "startHour": "9:00am",
+    "endHour": "5:00pm"
+  }
+]

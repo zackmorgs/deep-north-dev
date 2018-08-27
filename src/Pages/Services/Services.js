@@ -34,7 +34,7 @@ export class Service extends Component {
         </ul>
       </section>
     );
-  }
+  }w
 }
 
 export default Service;
