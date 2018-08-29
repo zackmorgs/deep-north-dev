@@ -19,7 +19,7 @@ export class Service extends Component {
   // }
 
   render() {
-    this.Container.CssClass += '';
+    // this.Container.CssClass;
     return (
       <section id="services" className={this.Container.CssClass}>
         <h4>Services</h4>

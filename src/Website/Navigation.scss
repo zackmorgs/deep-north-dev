@@ -1,6 +1,70 @@
 @import './../Styles/colors';
+
+.icon-menu {
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  border: 4px solid white;
+  padding: 1rem;
+  position: relative;
+  margin-left: auto;
+
+
+
+  .line {
+    background-color: white;
+    cursor: pointer;
+    height: 4px;
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    // width: 2rem;
+   transform-origin: 50% 50%;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
+  }
+  #l1 {
+    top:70% * (1/3);
+  }
+  #l2 {
+    top:70% * (2/3);
+  }
+  #l3 {
+    top:70% / (3/3);
+  }
+}
+.nav-open {
+    #l1 {
+    top:33.3333333%;
+    transform: translateY(5px) rotate(45deg);
+
+  }
+  #l2 {
+
+    opacity:0.0;
+  }
+  #l3 {
+    top:33.3333333%;
+    transform: translateY(5px) rotate(-45deg);
+
+  }
+}
+
+
 #nav-main {
   margin-bottom: 1rem;
+  &.nav-open {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $hotBlue;
+    z-index: 2;
+    padding: .5rem;
+    transition: transform .25s, opacity .25s, top .25s, left .25s,
+      right .5s, bottom .5s;
+  }
 }
 .nav-toggle {
   margin-left: auto;
@@ -10,7 +74,7 @@
   svg {
     height: 3rem;
     width: 4rem;
-    margin-left:auto;
+    margin-left: auto;
     // margin-top:4px;
   }
 }
@@ -35,35 +99,37 @@
   }
 }
 .nav-link {
-  margin:8px 0;
-  opacity:0.0;
-  transition:background-color .5s ease-in-out, opacity, transform .666s ease-in-out;
+  margin: 8px 0;
+  opacity: 0.0;
+  transition: background-color .5s ease-in-out, opacity,
+    transform .666s ease-in-out;
 
   &:active {
     background: $shadeBlue;
   }
   .caption {
-    display:block;
+    display: block;
     color: white;
-    font-weight:700;
+    font-weight: 700;
     font-size: 1.5rem;
     margin: 0 auto;
     text-align: center;
-    padding:0 0 1rem;
+    padding: 0 0 1rem;
   }
   .icon {
-    padding:1rem 1rem 0.25rem;
-    max-width:3.25rem;
+    padding: 1rem 1rem 0.25rem;
+    max-width: 3.25rem;
     margin: 0 auto;
     svg {
-      width:100%;
-      height:auto;
+      width: 100%;
+      height: auto;
     }
   }
 }
-.nav-open .nav-link {
-  opacity:1.0;
-
+.nav-open {
+  .nav-link {
+    opacity: 1.0;
+  }
+  .feather-menu line {
+  }
 }
-
-

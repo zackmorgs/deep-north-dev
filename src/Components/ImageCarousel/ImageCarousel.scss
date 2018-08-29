@@ -1,18 +1,9 @@
-@keyframes CrossFade {
-  25% {
-    opacity: 1;
-    -webkit-transform: scale(1) rotate(0);
-    transform: scale(1) rotate(0);
-  }
-  40% {
-    opacity: 0;
-  }
-}
-
 .carousel-container {
   margin-top: 1rem;
 }
+
 .carousel-slide {
+
   max-height: 14rem;
   overflow:hidden;
   // opacity:0.0;
@@ -87,4 +78,15 @@
 /* Straight-up 4k Displays */
 @media (min-width: 3840px) {
 
+}
+
+@keyframes CrossFade {
+  25% {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
+  40% {
+    opacity: 0;
+  }
 }

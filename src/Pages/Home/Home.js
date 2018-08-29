@@ -41,7 +41,6 @@ class Home extends Component {
                     <Slide key={Index}>
                       <img
                         src={CarouselImage}
-                        alt='Deep North Contracting'
                         className='carousel-img'
                       />
                     </Slide>

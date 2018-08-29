@@ -15,15 +15,11 @@ export class Hero extends Component {
     });
   }
   render () {
-    let Element = {
-      cssClass: 'hero'
-    };
-
-    this.state.isLoaded
-      ? (Element.cssClass += ' is-loaded')
-      : console.log('loading');
-
-    return <div className={Element.cssClass}>{this.props.children}</div>;
+    return (
+      <div className={this.state.isLoaded ? 'hero is-loaded' : 'hero'}>
+        {this.props.children}
+      </div>
+    );
   }
 }
 
@@ -33,9 +29,6 @@ export class HeroBackground extends Component {
   }
 
   render () {
-    <componentDidMount>
-      {'test'}
-    </componentDidMount>
     return <div className='hero-bg'>{this.props.children}</div>;
   }
 }
