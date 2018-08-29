@@ -9,38 +9,38 @@ class Slide extends Component {
     // }
   }
 
-  componentWillMount() {
+  // componentWillMount() {
 
-  }
+  // }
 
-  componentDidMount() {
+  // componentDidMount() {
 
-  }
+  // }
 
-  componentWillReceiveProps(nextProps) {
+  // componentWillReceiveProps(nextProps) {
 
-  }
+  // }
 
-  shouldComponentUpdate(nextProps, nextState) {
+  // shouldComponentUpdate(nextProps, nextState) {
 
-  }
+  // }
 
-  componentWillUpdate(nextProps, nextState) {
+  // componentWillUpdate(nextProps, nextState) {
 
-  }
+  // }
 
-  componentDidUpdate(prevProps, prevState) {
+  // componentDidUpdate(prevProps, prevState) {
 
-  }
+  // }
 
-  componentWillUnmount() {
+  // componentWillUnmount() {
 
-  }
+  // }
 
   render() {
     return (
       <div className='slide-carousel'>
-        <img src="" alt=""/>
+        <img src=""/>
       </div>
     );
   }

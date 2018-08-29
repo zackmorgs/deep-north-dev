@@ -18,33 +18,33 @@ export class Slide extends Component {
 }
 
 class ImageCarousel extends Component {
-  constructor (props) {
-    super(props);
-    // this.state = {
-    //   hasWidth: true,
-    //   shouldLoad: true
-    // };
-  }
+  // constructor (props) {
+  //   super(props);
+  //   // this.state = {
+  //   //   hasWidth: true,
+  //   //   shouldLoad: true
+  //   // };
+  // }
 
-  componentWillMount () {
-    //console.log('ImageCarousel() : componentWillMount ()');
-  }
+  // componentWillMount () {
+  //   //console.log('ImageCarousel() : componentWillMount ()');
+  // }
 
-  componentDidMount () {
-    //console.log('ImageCarousel() : componentDidMount ()');
+  // componentDidMount () {
+  //   //console.log('ImageCarousel() : componentDidMount ()');
 
-  }
+  // }
 
-  componentWillReceiveProps (nextProps) {
-    //console.log('ImageCarousel() : componentWillReceiveProps ()');
-  }
-  // shouldComponentUpdate(nextProps, nextState) {}
-  componentWillUpdate (nextProps, nextState) {
-    //console.log('ImageCarousel() : componentWillUpdate ()');
-  }
-  componentDidUpdate (prevProps, prevState) {
-    //console.log('ImageCarousel() : componentDidUpdate ()');
-  }
+  // componentWillReceiveProps (nextProps) {
+  //   //console.log('ImageCarousel() : componentWillReceiveProps ()');
+  // }
+  // // shouldComponentUpdate(nextProps, nextState) {}
+  // componentWillUpdate (nextProps, nextState) {
+  //   //console.log('ImageCarousel() : componentWillUpdate ()');
+  // }
+  // componentDidUpdate (prevProps, prevState) {
+  //   //console.log('ImageCarousel() : componentDidUpdate ()');
+  // }
   // componentWillUnmount() {}
   render () {
     //console.log('ImageCarousel() : render ()');

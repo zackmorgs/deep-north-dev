@@ -10,7 +10,7 @@
   margin-top: 1rem; }
 
 .carousel-slide {
-  max-height: 16rem;
+  max-height: 14rem;
   overflow: hidden; }
 
 .carousel-slide.active {
@@ -24,3 +24,29 @@
 
 .carousel-img.active {
   z-index: 2; }
+
+/* (iPhone 5 Portrait [320px]) */
+/* iPhone 6 and above */
+@media (min-width: 375px) {
+  .carousel-slide {
+    max-height: 17rem; } }
+
+@media (min-width: 414px) {
+  .carousel-slide {
+    max-height: 20rem; } }
+
+/* Small devices (landscape phones, 544px and up) */
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .carousel-slide {
+    max-height: 38rem; } }
+
+/* Large devices (desktops, 992px and up) */
+/* iPad Pro */
+@media (min-width: 1024px) {
+  .carousel-slide {
+    max-height: 38rem; } }
+
+/* Extra large devices (large desktops, 1200px and up) */
+/* Straight-up 1080 */
+/* Straight-up 4k Displays */
