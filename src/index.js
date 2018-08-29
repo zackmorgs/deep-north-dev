@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter} from 'react-router-dom';
+
 import './Styles/global.css';
 import Home from './Pages/Home/Home';
 import registerServiceWorker from './registerServiceWorker';

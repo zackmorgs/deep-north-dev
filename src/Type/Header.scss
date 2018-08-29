@@ -1,0 +1,12 @@
+@import './../Styles/_colors.scss';
+
+header {
+  text-align: center;
+  background:$shadierBlue ; //url('/img/instagram/Big_Sean_Pop_Up_Shop.jpg');
+  border:2px solid white;
+padding:1rem;
+  display:block;
+  h1 {
+  font-family: "Cormorant Garamond", sans-serif;
+  }
+}

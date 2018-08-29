@@ -1,50 +1,46 @@
 import React, { Component } from 'react';
+import Header from './../../Type/Header';
 
 import './Page.css';
 
 export class Page extends Component {
-  constructor(props){
+  constructor (props) {
     super(props);
     this.state = {
-      isLoaded : false
+      isLoaded: false
     };
   }
-  componentDidMount() {
+  componentDidMount () {
     console.log('Page : componentDidMount() Mounted');
     this.setState({
       isLoaded: true
     });
   }
-  componentWillMount(){
-    console.log('Page : componentWillMount() : Mounting')
+  componentWillMount () {
+    console.log('Page : componentWillMount() : Mounting');
   }
-  componentWillUpdate() {
-    console.log('Page : componentWillUpdate()')
+  componentWillUpdate () {
+    console.log('Page : componentWillUpdate()');
   }
-  componentDidUpdate(){
+  componentDidUpdate () {
     console.log('Page : Updated.');
   }
 
-  componentWillUnmount(){
+  componentWillUnmount () {
     console.log('Page : componentWillUnmount()');
   }
 
-  render() {
+  render () {
     console.log('Page : render()');
     return (
-      this.state.isLoaded ? (
-        <div {...this.props}>
-          {this.props.children}
-        </div >
-      ) : (
-          <div {...this.props}>
-    { this.props.children }
-      </div >
-      )
+      <div {...this.props}>
+        <Header Title={this.props.Title} />
+        {this.props.children}
+      </div>
     );
   }
 }
 Page.defaultProps = {
   className: 'page page-loading'
-}
+};
 export default Page;

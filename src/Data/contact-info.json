@@ -3,12 +3,10 @@
     {
       "contact" : "Phone",
       "value": "647-717-5252",
-      "icon" : ""
     },
     {
       "contact" : "Email",
       "value" : "contracting@deepnorth.ca",
-      "icon": ""
     }
   ]
 }

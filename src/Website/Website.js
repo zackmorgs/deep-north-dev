@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 // lib
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
-
+import { AnimatedSwitch } from 'react-router-transition';
 // ui
 import './Website.css';
 import './Navigation.css';
 
-import {Info, Mail, Briefcase } from 'react-feather';
+import { Info, Mail, Briefcase } from 'react-feather';
 
 // data
-
 
 // pages
 import Home from '../Pages/Home/Home';
@@ -29,7 +28,6 @@ export default class Website extends Component {
 
     this.state = {
       isLoaded: false,
-      currentPage: 'Home',
       menuOpen: false
     };
     this.handleClick = this.handleClick.bind(this);
@@ -40,15 +38,23 @@ export default class Website extends Component {
       isLoaded: true
     });
   }
-
+  componentWillUnmount() {}
   handleClick = () => {
+    console.log('handleClick()');
     this.setState({
       menuOpen: !this.state.menuOpen
     });
   };
-
+  componentDidUpdate() {
+    console.log('Website.js componentDidUpdate() :|', 'State:', this.state);
+  }
+  componentWillUpdate() {
+    console.log('Website.js componentWillUpdate() :|', 'State:', this.state);
+  }
+  compo;
   render() {
     console.log('Website.js render() :|', 'State:', this.state);
+
     return (
       <Container id="deep-north">
         <Background />
@@ -64,9 +70,9 @@ export default class Website extends Component {
                   <div className="toggle-container">
                     <a className="toggle" onClick={this.handleClick}>
                       <span className="icon-menu">
-                        <span id="l1" className="line"></span>
-                        <span id="l2" className="line"></span>
-                        <span id="l3" className="line"></span>
+                        <span id="l1" className="line" />
+                        <span id="l2" className="line" />
+                        <span id="l3" className="line" />
                       </span>
                     </a>
                   </div>
@@ -110,14 +116,22 @@ export default class Website extends Component {
               </Navigation>
 
               {/* all pages go in here */}
-              <main id="route-container">
-                <Route exactPath="/" component={Home} />
-                <Route path="/about" component={About} />
-                <Route path="/contact" component={Contact} />
-                <Route path="/services" component={Services} />
+              <main id="transition-container">
+                <AnimatedSwitch
+                  className="animated-switch"
+                  atActive={{ opacity: 1 }}
+                  atEnter={{ opacity: 0 }}
+                  atLeave={{ opacity: 0 }}
+                >
+                  <Route exact path="/" component={Home} />
+                  <Route path="/about" component={About} />
+                  <Route path="/contact" component={Contact} />
+                  <Route path="/services" component={Services} />
+                </AnimatedSwitch>
               </main>
             </RouteContainer>
           </Router>
+
         </Frame>
       </Container>
     );
@@ -177,6 +191,6 @@ NavLink.defaultProps = {
   className: 'nav-link',
   activeClassName: 'link-selected',
   onClick: ()=>{
-    console.log('clicked')
+    this.state.menuOpen=false
   }
 };

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import AutoPlaySwipeableViews from 'react-swipeable-views';
+// import { autoPlay } from 'react-swipeable-views-utils';
 
 // componenet
 import './Home.css';
@@ -27,49 +28,39 @@ class Home extends Component {
   constructor (props) {
     super(props);
   }
+
   render () {
+    // const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
     return (
       <Page>
         <Hero>
           {/* Image backgrounds */}
-
           <HeroBackground>
             <ImageCarousel>
-              <AutoPlaySwipeableViews>
+              {/* SpringConfig={
+                duration: string;
+              easeFunction: string;
+              delay: string;
+
+          } */}
+
+              <AutoPlaySwipeableViews
+                springConfig={{
+                  duration: '8',
+                  easeFunction: 'ease-out',
+                  delay: 0.0
+                }}
+              >
                 {CarouselImageList.map((CarouselImage, Index) => {
                   return (
                     <Slide key={Index}>
-                      <img
-                        src={CarouselImage}
-                        className='carousel-img'
-                      />
+                      <img src={CarouselImage} className='carousel-img' />
                     </Slide>
                   );
                 })}
-                ;
               </AutoPlaySwipeableViews>
             </ImageCarousel>
           </HeroBackground>
-
-          {/* Front text */}
-          {/* <HeroForeground>
-
-            <TextCarousel>
-              <h1>General Contractors</h1>
-              <span className='subtitle'>Odd-job specialists</span>
-            </TextCarousel>
-
-            <TextCarousel>
-              <h1>A team you can trust</h1>
-              <span className='subtitle'>Odd-job specialists</span>
-            </TextCarousel>
-
-            <TextCarousel>
-              <h1>General Contractors</h1>
-              <span className='subtitle'>Odd-job specialists</span>
-            </TextCarousel>
-
-          </HeroForeground> */}
         </Hero>
         {/* {this.props.children} */}
 

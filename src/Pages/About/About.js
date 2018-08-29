@@ -9,8 +9,8 @@ export class About extends Component {
 
   render () {
     return (
-      <Page>
-        <h1>About</h1>
+      <Page Title={'About'}>
+
       </Page>
     );
   }
