@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import './Slide.css';
+
 class Slide extends Component {
   constructor(props) {
     super(props);

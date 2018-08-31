@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 // import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import Page from '../../Components/Page/Page';
-import Header from './../../Type/Header';
 import ServiceList from './../../Data/services.json';
 
 import './Services.css';
@@ -24,9 +23,9 @@ export class Service extends Component {
     // this.Container.CssClass;
     return (
       <Page >
-        <Header Title={'Services'}>
-
-        </Header>
+        <header>
+          <h1>Services</h1>
+        </header>
         <section id='services' className={this.Container.CssClass}>
           <ul className='list-service'>
             {ServiceList.map((Service, Index) => {

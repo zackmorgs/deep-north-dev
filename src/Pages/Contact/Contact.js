@@ -16,8 +16,8 @@ class Contact extends Component {
   }
   render() {
     return (
-      <Page Title={'Contact'}>
-
+      <Page>
+        <h1>Contact</h1>
       </Page>
     )
   }

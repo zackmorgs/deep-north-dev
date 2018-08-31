@@ -37,13 +37,6 @@ class Home extends Component {
           {/* Image backgrounds */}
           <HeroBackground>
             <ImageCarousel>
-              {/* SpringConfig={
-                duration: string;
-              easeFunction: string;
-              delay: string;
-
-          } */}
-
               <AutoPlaySwipeableViews
                 springConfig={{
                   duration: '8',
@@ -60,10 +53,12 @@ class Home extends Component {
                 })}
               </AutoPlaySwipeableViews>
             </ImageCarousel>
+            <HeroForeground>
+
+            </HeroForeground>
           </HeroBackground>
         </Hero>
         {/* {this.props.children} */}
-
         <footer>
           <Logo />
         </footer>

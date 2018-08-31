@@ -34,7 +34,6 @@ export class Page extends Component {
     console.log('Page : render()');
     return (
       <div {...this.props}>
-        <Header Title={this.props.Title} />
         {this.props.children}
       </div>
     );

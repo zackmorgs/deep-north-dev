@@ -2,10 +2,10 @@
 #logo {
     display: block;
     padding: 0 1rem 0;
-    
-    
+
+
     width: 100%;
-    max-width: 228px;
+    max-width: 252px;
     margin: 0 auto;
   svg {
     // color:white;
@@ -13,6 +13,7 @@
 }
 
 footer {
+
   position: absolute;
     bottom: 1rem;
     left: 0;
@@ -33,34 +34,34 @@ footer {
 /* Small devices (landscape phones, 544px and up) */
 @media (min-width: 544px) {
 
-} 
+}
 
 /* Small devices (landscape phones, 544px and up) */
-@media (min-width: 544px) {  
- 
+@media (min-width: 544px) {
+
 }
- 
+
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {  
- 
+@media (min-width: 768px) {
+
 }
- 
+
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
- 
+@media (min-width: 992px) {
+
 }
- 
+
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  
-    
+@media (min-width: 1200px) {
+
 }
 
 /* Straight-up 1080 */
-@media (min-width: 1920px) {  
-    
+@media (min-width: 1920px) {
+
 }
 
 /* Straight-up 4k Displays */
-@media (min-width: 3840px) {  
+@media (min-width: 3840px) {
 
 }

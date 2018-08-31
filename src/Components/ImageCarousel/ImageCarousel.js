@@ -10,7 +10,7 @@ export class Slide extends Component {
   componentDidMount () {}
   render () {
     return (
-      <div {...this.props} className='carousel-slide'>
+      <div {...this.props} className='slide'>
         {this.props.children}
       </div>
     );
@@ -47,22 +47,14 @@ class ImageCarousel extends Component {
   // }
   // componentWillUnmount() {}
   render () {
-    //console.log('ImageCarousel() : render ()');
+    // console.log('ImageCarousel() : render ()');
 
     return (
-      <div {...this.props} className='carousel-slide'>
+      <div {...this.props} className='img-carousel'>
         {this.props.children}
       </div>
     );
-
-    // return (this.hasWidth && this.state.shouldLoad) ? (
-    //   <div className='carousel-slide loading'>{this.props.children}</div>
-    // ) : (
-    //   <div className='carousel-slide loading' />
-    // );
   }
 }
-
-// ImageCarousel.propTypes = {};
 
 export default ImageCarousel;

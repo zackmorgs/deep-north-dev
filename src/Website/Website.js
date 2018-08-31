@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
+
+import './TypographyTest';
+
 // lib
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
-import { AnimatedSwitch } from 'react-router-transition';
+import { Switch } from 'react-router';
+import {
+  BrowserRouter as Router,
+  Route,
+  NavLink,
+  Redirect
+} from 'react-router-dom';
 // ui
 import './Website.css';
 import './Navigation.css';
@@ -57,7 +65,7 @@ export default class Website extends Component {
 
     return (
       <Container id="deep-north">
-        <Background />
+        {/* <Background /> */}
         <Frame>
           <Router>
             <RouteContainer>
@@ -78,7 +86,10 @@ export default class Website extends Component {
                   </div>
                 </div>
                 <NavList
-                  className={this.state.menuOpen ? 'nav-show' : 'nav-hidden'}
+                  className={
+                    'nav-list ' +
+                    (this.state.menuOpen ? 'nav-show' : 'nav-hidden')
+                  }
                 >
                   <NavItem>
                     <NavLink to={'/'}>
@@ -117,21 +128,16 @@ export default class Website extends Component {
 
               {/* all pages go in here */}
               <main id="transition-container">
-                <AnimatedSwitch
-                  className="animated-switch"
-                  atActive={{ opacity: 1 }}
-                  atEnter={{ opacity: 0 }}
-                  atLeave={{ opacity: 0 }}
-                >
-                  <Route exact path="/" component={Home} />
-                  <Route path="/about" component={About} />
-                  <Route path="/contact" component={Contact} />
-                  <Route path="/services" component={Services} />
-                </AnimatedSwitch>
+                <Switch>
+                  <Route path="/" exact component={Home} />
+                  <Route path="/about/" component={About} />
+                  <Route path="/contact/" component={Contact} />
+                  <Route path="/services/" component={Services} />
+                  <Route path="/type/" component={type} />
+                </Switch>
               </main>
             </RouteContainer>
           </Router>
-
         </Frame>
       </Container>
     );
@@ -190,7 +196,7 @@ NavItem.defaultProps = {
 NavLink.defaultProps = {
   className: 'nav-link',
   activeClassName: 'link-selected',
-  onClick: ()=>{
-    this.state.menuOpen=false
+  onClick: () => {
+    this.state.menuOpen = false;
   }
 };

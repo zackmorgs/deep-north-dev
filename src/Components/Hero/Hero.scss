@@ -1,25 +1,30 @@
 .hero {
-  padding:0;
-  margin: 0;
+  padding: 0;
+  // margin: 0 -1rem;
   // border: 8px solid white;
-  opacity:0.0;
-  background: black;
-  transform: translateY(-80%);
+  opacity: 0.0;
+  // background: black;
+  // transform: translateY(-80%);
 
+  // border: 4px solid white;
+  // margin-left: -2rem;
+  // margin-right: -2rem;
 
-border: 4px solid white;
-    // margin-left: -2rem;
-    // margin-right: -2rem;
+  // position:absolute;
+  // top:0;
+  // left:0;
+  // right:0;
+  // bottom:0;
+  // height: 100%;
+  // width:100%;
   &.is-loaded {
-
     transform: translateY(0);
-    opacity:1.0;
-    transition:opacity, transform ease-in-out 1.618s;
+    opacity: 1.0;
+    transition: opacity, transform ease-in-out 1.618s;
   }
 }
 
-.hero-front,
 .hero-bg {
-
-  top:0;
+  width:100%;
+  height:100%;
 }

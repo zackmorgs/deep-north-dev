@@ -9,8 +9,13 @@ export class About extends Component {
 
   render () {
     return (
-      <Page Title={'About'}>
-
+      <Page>
+        <header>
+          <h1>About</h1>
+          <span className="subtitle">
+            Who We Are and What We Do
+          </span>
+        </header>
       </Page>
     );
   }
