@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import './TypographyTest';
 
 // lib
 import { Switch } from 'react-router';
@@ -133,7 +132,7 @@ export default class Website extends Component {
                   <Route path="/about/" component={About} />
                   <Route path="/contact/" component={Contact} />
                   <Route path="/services/" component={Services} />
-                  <Route path="/type/" component={type} />
+                  {/* <Route path="/type/" component={type} /> */}
                 </Switch>
               </main>
             </RouteContainer>

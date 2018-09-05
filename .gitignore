@@ -22,3 +22,10 @@ yarn-error.log*
 
 # shoulda done this a loooong time ago
 *.css
+
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

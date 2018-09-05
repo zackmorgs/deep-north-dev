@@ -16,6 +16,7 @@ export class About extends Component {
             Who We Are and What We Do
           </span>
         </header>
+        <p></p>
       </Page>
     );
   }
