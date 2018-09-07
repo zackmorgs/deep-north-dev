@@ -17,9 +17,6 @@ export class Container extends Component {
     });
   }
   render () {
-    let Element = {
-      CssClass: ''
-    };
     return <div {...this.props}>{this.props.children}</div>;
   }
 }

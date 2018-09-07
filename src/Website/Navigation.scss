@@ -1,13 +1,18 @@
 @import './../Styles/colors';
 
 #nav-main {
+  position: sticky;
+  top: 0;
+  // background: black;
   padding: 1rem;
   z-index: 3;
-  background-color: $darkBlue;
-
-  transition: transform 0.25s, opacity 0.5s, top 0.25s, left 0.25s, right 0.5s,
+  transition: 
+    transform 0.25s,
+    opacity 0.5s, 
+    top 0.25s, left 
+    0.25s, 
+    right 0.5s,
     bottom 0.5s;
-
   opacity: 1;
   transform: translateY(0%);
   &.nav-loading {
@@ -16,8 +21,11 @@
   }
 
   &.nav-open {
+
+    height:100%;
     transform: translateY(0%);
-    position: absolute;
+    
+    position: sticky;
     top: 0;
     right: 0;
     bottom: 0;
@@ -25,12 +33,12 @@
     // padding: .5rem;
     transition: transform 0.25s, opacity 0.25s, top 0.25s, left 0.25s,
       right 0.5s, bottom 0.5s;
+
+    // background: black;
   }
-  // background-color: black;tran
 }
 .nav-toggle {
   margin-left: auto;
-  // margin-bottom: 1rem;
   text-align: center;
   width: 100%;
 }
@@ -40,12 +48,11 @@
 
 .nav-link {
   text-decoration: none;
-  display: block;
-  // border: 8px solid white;
-  text-decoration: none;
-  // border: 4px solid white;
-  transition: transform 0.25s, opacity 0.25s, top 0.25s, left 0.25s, right 0.5s;
+  font-size:1.25rem;
 
+  transition: transform 0.25s, opacity 0.25s, top 0.25s, left 0.25s, right 0.5s;
+  display: block;
+  margin:1rem;
   .icon {
     text-align: center;
     display: block;
@@ -55,26 +62,23 @@
     }
   }
 
-  // margin: 8px 0;
   opacity: 0;
 
   &:active {
     background: $shadeBlue;
   }
-  // &.link-selected {
-  //   display:none;
-  // }
+
   .caption {
+    font-family:'Montserrat', sans-serif;
     display: block;
     color: white;
-    font-weight: 700;
-    font-size: 1.5rem;
+
     margin: 0 auto;
     text-align: center;
     padding: 0 0 1rem;
   }
   .icon {
-    padding: 1rem 1rem 0.25rem;
+    padding: 1rem;
     max-width: 4rem;
     margin: 0 auto;
     svg {
@@ -94,7 +98,6 @@
   width: 2rem;
   height: 2rem;
   display: block;
-  // border: 2px solid white;
   padding: 1rem;
   position: relative;
   margin-left: auto;
@@ -106,32 +109,32 @@
     position: absolute;
     left: 0;
     right: 0;
-    // width: 2rem;
     transform-origin: 50% 50%;
     transition-duration: 0.1s;
     transition-timing-function: ease-out;
   }
   #l1 {
-    top: 70% * (1/3);
+    top: 75% * (1/3);
   }
   #l2 {
-    top: 70% * (2/3);
+    top: 75% * (2/3);
   }
   #l3 {
-    top: 70% / (3/3);
+    top: 75% / (3/3);
   }
 }
 .nav-open {
+  
   #l1 {
-    top: 33.3333333%;
-    transform: translateY(5px) rotate(45deg);
+    top: 75% * (2/3);
+    transform: translateY(-50%) rotate(45deg);
   }
   #l2 {
     opacity: 0;
   }
   #l3 {
-    top: 33.3333333%;
-    transform: translateY(5px) rotate(-45deg);
+    top: 75% * (2/3);
+    transform: translateY(-50%) rotate(-45deg);
   }
 }
 

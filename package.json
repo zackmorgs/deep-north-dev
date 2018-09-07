@@ -30,8 +30,8 @@
     "build-scripts": "npm-run-all -p make-lists build-css build",
     "make-lists": "node ./get-images.js",
     "react-start": "react-scripts start",
-    "build-css": "node-sass src/ -o src/  -r --output-style compress --sourcemap true --source-map-contents sass",
-    "watch-css": "node-sass src/ -o src/ -r -w --output-style compress --sourcemap true --source-map-contents sass",
+    "build-css": "node-sass src/ -o src/  -r --output-style compress --sourcemap true --source-map-embed ---source-map-contents sass",
+    "watch-css": "node-sass src/ -o src/ -r -w --output-style compress --sourcemap true --source-map-embed --source-map-contents sass",
     "build": "react-scripts build",
     "eject": "react-scripts eject"
   },

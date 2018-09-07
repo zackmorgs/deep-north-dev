@@ -1,0 +1,23 @@
+@import './RootEM';
+:root {
+  font-family: 'Montserrat', serif;
+  color: white;
+  text-rendering: optimizeLegibility;
+ -webkit-font-smoothing:antialiased;
+}
+blockquote:before {
+  content: open-quote;
+}
+blockquote:after {
+  content: close-quote;
+}
+h1, h2, h3, [class^='title'] { 
+  font-family: 'Cormorant Garamond', serif;
+}
+h1 {
+  font-size:3rem;
+}
+h2 {
+  font-size:2rem;
+}
+

@@ -6,23 +6,25 @@
   left: 0;
   right: 0;
   bottom: 0;
-
   overflow: hidden;
   z-index: 0;
-
-  // $horizontal: top; 
-  // $vertical: left;
-  background:$hotBlue;
+  // background:$hotBlue;
 }
 
-#blueprint {
-  height: 100%;
-  width: 100%;
-  background:radial-gradient(
-    ellipse at center,
-    transparentize($shadeBlue, 0.25) 0%,
-    $shadierBlue 100%
-  );
+#blueprint-bg {
+  // height: 100%;
+  // width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  // background:radial-gradient(
+  //   ellipse at center,
+  //   transparentize($shadeBlue, 0.25) 0%,
+  //   $shadierBlue 100%
+  // );
 }
 
 #lines-y,

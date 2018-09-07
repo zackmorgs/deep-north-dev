@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+
+import { Phone } from 'react-feather';
+
 // component
 import './Home.css';
 
@@ -14,12 +17,12 @@ import Hero, {
   HeroForeground,
   HeroBackground
 } from './../../Components/Hero/Hero';
-import TextCarousel from './../../Components/ImageCarousel/ImageCarousel';
-import ImageCarousel, {
-  Slide
-} from './../../Components/ImageCarousel/ImageCarousel';
+// import TextCarousel from './../../Components/ImageCarousel/ImageCarousel';
+// import ImageCarousel, {
+//   Slide
+// } from './../../Components/ImageCarousel/ImageCarousel';
 
-var Carousel = require('react-responsive-carousel').Carousel;
+// var Carousel = require('react-responsive-carousel').Carousel;
 
 // class Home extends Page {
 // ^ someday?
@@ -34,30 +37,25 @@ class Home extends Component {
       <Page>
         <Hero>
           {/* Image backgrounds */}
-          <HeroBackground>
-            {/* <ImageCarousel>
-              <Carousel autoPlay interval={1000} infiniteLoop>
-                {CarouselImageList.map((CarouselImage, Index) => {
-                  return (
-                    <div>
-                      <img src={CarouselImage} className="carousel-img" />
-                    </div>
-                  );
-                })}
-              </Carousel>
-            </ImageCarousel> */}
+          {/* <HeroBackground>
+          </HeroBackground> */}
             <Logo />
             <div className="hero-text">
-              <h1>General Contractors</h1>
-              <span className="subtitle">Odd Job Specialists</span>
-              <p>"There is no task too small, tall or odd at all!"</p>
+              {/* <h1>
+                General Contracting for Toronto and the Greater Area
+              </h1> */}
             </div>
-            {/* <HeroForeground /> */}
-          </HeroBackground>
         </Hero>
-        {/* {this.props.children} */}
-        <div className="cta" />
-        <footer />
+        <div className="cta">
+          <a href="tel:+6477175252" className="btn cta-telephone">
+            <Phone /> Call Us
+          </a>
+        </div>
+        <h1>Test</h1>
+        <h2>Test</h2>
+        <h3>Test</h3>
+        <h4>Test</h4>
+        
       </Page>
     );
   }

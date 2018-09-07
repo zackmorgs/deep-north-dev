@@ -10,6 +10,7 @@ import {
 } from 'react-router-dom';
 // ui
 import './Website.css';
+import './Type.css';
 import './Navigation.css';
 
 import { Info, Mail, Briefcase } from 'react-feather';
@@ -25,7 +26,6 @@ import Services from '../Pages/Services/Services';
 // components
 import Container from '../Components/Container/Container';
 import Background from '../Components/Background/Background';
-import Frame from '../Components/Frame/Frame';
 
 // go
 export default class Website extends Component {
@@ -37,7 +37,7 @@ export default class Website extends Component {
       backgroundLoaded: false,
       menuOpen: false
     };
-    this.handleClick = this.handleClick.bind(this);
+    //this.handleClick = this.handleClick.bind(this);
     this.handleBackgroundLoaded = this.handleBackgroundLoaded.bind(this);
   }
   componentDidMount() {
@@ -66,20 +66,21 @@ export default class Website extends Component {
   compo;
   render() {
     console.log('Website.js render() :|', 'State:', this.state);
+
+    // nav class logic
     let className_nav = '';
     if (!this.state.isLoaded) {
       className_nav = 'nav-loading';
     }
-    // className_nav += this.state.backgroundLoaded ? 'nav-show ' : '';
     className_nav += this.state.menuOpen ? 'nav-open' : '';
 
     return (
       <Container id="deep-north">
-        <Frame>
-          <Background onLoad={this.handleBackgroundLoaded} />
-          <Router>
-            <RouteContainer>
-              <Navigation id="nav-main" className={className_nav}>
+        <Background onLoad={this.handleBackgroundLoaded} />
+        <Router>
+          <Frame>
+            <Navigation id="nav-main" className={className_nav}>
+              <div className="nav-container">
                 <div className="nav-toggle">
                   <span className="icon-menu" onClick={this.handleClick}>
                     <span id="l1" className="line" />
@@ -126,19 +127,19 @@ export default class Website extends Component {
                     </NavLink>
                   </NavItem>
                 </NavList>
-              </Navigation>
+              </div>
+            </Navigation>
 
-              <main id="transition-container">
-                <Switch>
-                  <Route path="/" exact component={Home} />
-                  <Route path="/about/" component={About} />
-                  <Route path="/contact/" component={Contact} />
-                  <Route path="/services/" component={Services} />
-                </Switch>
-              </main>
-            </RouteContainer>
-          </Router>
-        </Frame>
+            <main>
+              <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/about/" component={About} />
+                <Route path="/contact/" component={Contact} />
+                <Route path="/services/" component={Services} />
+              </Switch>
+            </main>
+          </Frame>
+        </Router>
       </Container>
     );
   }
@@ -163,11 +164,11 @@ class iconHome extends Component {
   }
 }
 // i made this cause react-router shouted at me and told me to return one component to it so fine there ya go.
-let RouteContainer = props => {
+let Frame = props => {
   return <div {...props}>{props.children}</div>;
 };
-RouteContainer.defaultProps = {
-  className: 'route-container'
+Frame.defaultProps = {
+  className: 'frame'
 };
 // Navigation ie .nav-container
 let Navigation = props => {

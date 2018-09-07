@@ -12,35 +12,27 @@ export class Page extends Component {
     //console.log(this.props.className);
   }
   componentDidMount() {
-    //console.log('Page : componentDidMount() Mounted', document.querySelector('.page').classList.remove('page-loading'));
+    console.log('Page : componentDidMount() Mounted');
     this.setState({
       isLoaded: true
     });
     
   }
   componentWillMount() {
-    // console.log(
-    //   'Page : componentWillMount() : Mounting',
-    //   this.props.className
-    // );
+    console.log('Page : componentWillMount() : Mounting');
   }
   componentWillUpdate() {
-    // console.log(
-    //   'Page : componentWillUpdate()',
-    //   document.querySelector('.page').className,
-    //   this.props.className
-    // );
+    console.log(
+      'Page : componentWillUpdate()',
+      document.querySelector('.page').className
+    );
   }
   componentDidUpdate() {
-    // console.log(
-    //   'Page : Updated.',
-    //   document.querySelector('.page').className,
-    //   this.props.className
-    // );
+    console.log('Page : componentDidUpdate().');
   }
 
   componentWillUnmount() {
-    // console.log('Page : componentWillUnmount()');
+    console.log('Page : componentWillUnmount()');
   }
 
   render() {

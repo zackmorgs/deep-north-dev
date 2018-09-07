@@ -13,8 +13,7 @@ export class Background extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoaded: false,
-      angle: 0
+      isLoaded: false
     };
   }
   componentDidMount() {
@@ -26,7 +25,6 @@ export class Background extends Component {
     let Container = {
       cssClass: 'bg'
     };
-    // ill probably animate the gridlines if i have time.
 
     return (
       <div
@@ -58,15 +56,12 @@ export class Blueprint extends Component {
       });
     };
     this.addLines = this.addLines.bind(this);
-    // this.grid = () => {
-    //   const x_max = window.screen.width;
-    //   const y_max = window.screen.height;
-    // };
+
   }
   componentWillUnmount() {}
   componentWillMount() {}
   componentDidUpdate() {
-    console.log('background updated');
+    //console.log('background updated');
   }
 
   componentDidMount() {
@@ -85,7 +80,7 @@ export class Blueprint extends Component {
 
     let addLines = (endX, endY) => {
       function timerAdd_Y() {
-        console.log('addlinesY', screenHeight,Y.clientHeight);
+        //console.log('addlinesY', screenHeight,Y.clientHeight);
 
         // linesY[].classList.add('loaded');
         if (screenHeight > Y.clientHeight) {
@@ -133,7 +128,7 @@ export class Blueprint extends Component {
       var index_Y = 0;
 
       function animateY_timer() {
-        console.log('Y', index_Y, 'of', linesY.length);
+        //console.log('Y', index_Y, 'of', linesY.length);
 
         if (index_Y < linesY.length) {
           linesY[index_Y].classList.add('loaded');
