@@ -1,27 +1,20 @@
 .frame {
-  // display:block;
 
-  // position: absolute;
-  // top:0;
-  // left:0;
-  // right:0;
-  // bottom:0;
-
-
-  // margin:1rem;
-
-  // padding: .5rem;
-
-  // border:.5rem solid white;
-
-  // overflow-y:scroll;
-  // max-width:960px;
-  // margin: 0 auto;
-
-  // width: 100%;
-  // height:100%;
-
+  z-index:0;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  overflow-y: scroll;
 }
+
+// .a{
+//   fill:none;
+//   stroke:#fff;
+//   stroke-miterlimit:10;
+//   stroke-width:1px;
+// }
 // Start on the smallest screen, work your way up.
 
 /* (iPhone 5 Portrait [320px]) */

@@ -41,8 +41,9 @@ class Slide extends Component {
 
   render() {
     return (
-      <div className='slide-carousel'>
-        <img src=""/>
+      <div>
+        {/* <img src=""/> */}
+        {this.props.children}
       </div>
     );
   }

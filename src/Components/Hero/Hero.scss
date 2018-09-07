@@ -1,30 +1,93 @@
+@import './../../Styles/colors';
+
 .hero {
   padding: 0;
-  // margin: 0 -1rem;
-  // border: 8px solid white;
-  opacity: 0.0;
-  // background: black;
-  // transform: translateY(-80%);
+  opacity: 0;
+  // background: rgba(0,0,0,0.1);
 
-  // border: 4px solid white;
-  // margin-left: -2rem;
-  // margin-right: -2rem;
+  padding: 2rem 0;
+  z-index: 0;
+  transition: opacity ease-in-out 200ms 200ms, transform ease-in-out 300ms 0ms,
+    background 100ms 200ms;
 
-  // position:absolute;
-  // top:0;
-  // left:0;
-  // right:0;
-  // bottom:0;
-  // height: 100%;
-  // width:100%;
+  transform: translateY(100%);
+  opacity: 0;
+  text-align: center;
   &.is-loaded {
     transform: translateY(0);
-    opacity: 1.0;
-    transition: opacity, transform ease-in-out 1.618s;
+    opacity: 1;
+    // background: $shadeBlue;
   }
 }
 
 .hero-bg {
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
+}
+.hero-text {
+  // background: $darkBlue;
+  // text-rendering: geometricPrecision;
+  // border-bottom: .5rem solid $blueprintBG;
+  display: block;
+  h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    // margin-top: 1rem;
+    // margin-bottom: -2rem;
+    margin:0;
+    padding: 1rem;
+    font-family: 'Maiola';
+        font-family: 'Baltica Regular';
+    color: $goldenRod;
+    line-height: 1em;
+    display: block;
+  }
+  .text-ampersand {
+    display: block;
+    font-family: 'Maiola Italic';
+    
+    padding: 1rem 0 1rem;
+
+    font-size: 1.5rem;
+    font-variant-ligatures: discretionary-ligatures;
+    display: block;
+    justify-content: center;
+    flex-basis: content;
+    text-align: center;
+    line-height: 2rem;
+    color: $blueprintBG;
+    background: white;
+    &:before,
+    &:after {
+      width: 4rem;
+      // height: 1rem;
+      content: '';
+      display: inline-block;
+      top: -8px;
+      // height:1rem;
+      margin-left: 1em;
+      margin-right: 1em;
+      position: relative;
+      border-top: solid 1px $shadeRed;
+    }
+  }
+  .subtitle {
+    display: block;
+    font-family: 'Maiola';
+    font-weight: 800;
+    // font-style:italic;
+    // color:#C40020;
+    // background:white;
+    // margin-top: -1rem;
+    padding: 0rem 0 1.1rem;
+    padding: 0.25rem 0 1.1rem;
+    font-weight: 500;
+    // background-color: rgba(21, 7, 195, 0.25);
+    font-variant-caps: petite-caps;
+    // border-bottom: 1px solid white;
+    font-size: 1.5rem;
+    // margin-top: -1.25rem;
+    background: $goldenRod;
+    color: $shadeRed;
+  }
 }

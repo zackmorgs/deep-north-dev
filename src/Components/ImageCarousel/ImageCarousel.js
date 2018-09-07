@@ -10,7 +10,7 @@ export class Slide extends Component {
   componentDidMount () {}
   render () {
     return (
-      <div {...this.props} className='slide'>
+      <div {...this.props} >
         {this.props.children}
       </div>
     );
@@ -50,7 +50,7 @@ class ImageCarousel extends Component {
     // console.log('ImageCarousel() : render ()');
 
     return (
-      <div {...this.props} className='img-carousel'>
+      <div {...this.props} >
         {this.props.children}
       </div>
     );

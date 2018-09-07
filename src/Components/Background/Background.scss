@@ -1,42 +1,93 @@
 @import './../../Styles/colors';
 
 .bg {
-  // background-color:#2E1AB5;
-  // background-color: ;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
 
-overflow: hidden;
+  overflow: hidden;
+  z-index: 0;
 
-  $horizontal:top;
-  $vertical:left;
-
-  // background-position:50% 50%;
-  // background-repeat:round;
-  // resize: both;
-  // background-origin:content-box;
-  // background-size:cover;
-  // background-color: $regalBlue;
-  // background: $regalBlue
-    // url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='178' height='178' viewBox='0 0 100 100'%3E%3Cg fill-rule=''%3E%3Cg fill='white' fill-opacity='1'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-
-        >
-.gridline {
-  stroke: white;
-  stroke-width:4;
-  stroke-linecap:square;
-  stroke-linejoin: miter;
-
-  width:100%;
-
+  // $horizontal: top; 
+  // $vertical: left;
+  background:$hotBlue;
 }
 
 #blueprint {
-  height : 100%;
-  width : 100%;
-  text-align : center;
+  height: 100%;
+  width: 100%;
+  background:radial-gradient(
+    ellipse at center,
+    transparentize($shadeBlue, 0.25) 0%,
+    $shadierBlue 100%
+  );
+}
+
+#lines-y,
+#lines-x {
+  position: absolute;
+}
+#lines-y {
+  top: 0;
+  left: 0;
+  right: 0;
+
+}
+#lines-x {
+  top: 0;
+  bottom: 0;
+}
+
+$lineColor: rgba(255, 255, 255, 0.125);
+
+.line-y {
+  height: 1rem;
+  width: 0;
+  &.loaded {
+    width: 100%;
+  }
+}
+.line-y, .line-x {
+  transition: 
+    width .25s ease-in-out, 
+    height .25s ease-in-out, 
+    border .25s ease-in-out;
+
+}
+#blueprint.loading {
+  .line-x {
+    border-right: 1px dashed transparent;
+    width: 1rem;
+    height: 0;
+    float: left;
+    &.loaded {
+      height: 100%;
+      border-right: 1px dashed rgba(255, 255, 255, 0.33);
+    }
+  }
+  .line-y {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.33);
+
+    &.loaded {
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.33);
+    }
+  }
+}
+#blueprint.loaded {
+  .line-x {
+    width: 1rem;
+    height: 0;
+    float: left;
+    &.loaded {
+      height: 100%;
+      border-right: 1px dashed $lineColor;
+    }
+  }
+  .line-y {
+    &.loaded {
+      border-bottom: 1px dashed $lineColor;
+    }
+  }
 }

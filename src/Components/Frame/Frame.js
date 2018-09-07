@@ -1,29 +1,27 @@
 import React, { Component } from 'react';
 import './Frame.css';
 
+import Ruler from './Ruler';
+
 export class Frame extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.state = {
       isLoaded: false
     };
   }
-  componentDidMount () {
+  componentDidMount() {
     this.setState({
       isLoaded: true
     });
   }
-  render () {
-    let Element = {
-      cssClass: 'frame'
-    };
-
-    this.state.isLoaded
-      ? (Element.cssClass += ' is-loaded')
-      : console.log('Frame.js render() :| .is-loaded');
-
-    return <div className={Element.cssClass}>{this.props.children}</div>;
+  render() {
+    return (
+      <div className={'frame' + (this.state.isLoaded ? ' loaded' : ' loading')}>
+        {this.props.children}
+      </div>
+    );
   }
 }
 

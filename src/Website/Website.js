@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 // lib
 import { Switch } from 'react-router';
 import {
@@ -35,14 +34,20 @@ export default class Website extends Component {
 
     this.state = {
       isLoaded: false,
+      backgroundLoaded: false,
       menuOpen: false
     };
     this.handleClick = this.handleClick.bind(this);
-    // holy shit you can do this.
+    this.handleBackgroundLoaded = this.handleBackgroundLoaded.bind(this);
   }
   componentDidMount() {
     this.setState({
       isLoaded: true
+    });
+  }
+  handleBackgroundLoaded() {
+    this.setState({
+      backgroundLoaded: true
     });
   }
   componentWillUnmount() {}
@@ -61,28 +66,26 @@ export default class Website extends Component {
   compo;
   render() {
     console.log('Website.js render() :|', 'State:', this.state);
+    let className_nav = '';
+    if (!this.state.isLoaded) {
+      className_nav = 'nav-loading';
+    }
+    // className_nav += this.state.backgroundLoaded ? 'nav-show ' : '';
+    className_nav += this.state.menuOpen ? 'nav-open' : '';
 
     return (
       <Container id="deep-north">
-        {/* <Background /> */}
         <Frame>
+          <Background onLoad={this.handleBackgroundLoaded} />
           <Router>
             <RouteContainer>
-              {/* nav */}
-              <Navigation
-                id="nav-main"
-                className={this.state.menuOpen ? 'nav-open' : 'nav-closed'}
-              >
+              <Navigation id="nav-main" className={className_nav}>
                 <div className="nav-toggle">
-                  <div className="toggle-container">
-                    <a className="toggle" onClick={this.handleClick}>
-                      <span className="icon-menu">
-                        <span id="l1" className="line" />
-                        <span id="l2" className="line" />
-                        <span id="l3" className="line" />
-                      </span>
-                    </a>
-                  </div>
+                  <span className="icon-menu" onClick={this.handleClick}>
+                    <span id="l1" className="line" />
+                    <span id="l2" className="line" />
+                    <span id="l3" className="line" />
+                  </span>
                 </div>
                 <NavList
                   className={
@@ -125,14 +128,12 @@ export default class Website extends Component {
                 </NavList>
               </Navigation>
 
-              {/* all pages go in here */}
               <main id="transition-container">
                 <Switch>
                   <Route path="/" exact component={Home} />
                   <Route path="/about/" component={About} />
                   <Route path="/contact/" component={Contact} />
                   <Route path="/services/" component={Services} />
-                  {/* <Route path="/type/" component={type} /> */}
                 </Switch>
               </main>
             </RouteContainer>

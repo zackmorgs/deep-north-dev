@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import AutoPlaySwipeableViews from 'react-swipeable-views';
-// import { autoPlay } from 'react-swipeable-views-utils';
-
-// componenet
+// component
 import './Home.css';
 
 // data
@@ -22,51 +19,50 @@ import ImageCarousel, {
   Slide
 } from './../../Components/ImageCarousel/ImageCarousel';
 
+var Carousel = require('react-responsive-carousel').Carousel;
+
 // class Home extends Page {
 // ^ someday?
 class Home extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
   }
 
-  render () {
+  render() {
     // const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
     return (
       <Page>
         <Hero>
           {/* Image backgrounds */}
           <HeroBackground>
-            <ImageCarousel>
-              <AutoPlaySwipeableViews
-                springConfig={{
-                  duration: '8',
-                  easeFunction: 'ease-out',
-                  delay: 0.0
-                }}
-              >
+            {/* <ImageCarousel>
+              <Carousel autoPlay interval={1000} infiniteLoop>
                 {CarouselImageList.map((CarouselImage, Index) => {
                   return (
-                    <Slide key={Index}>
-                      <img src={CarouselImage} className='carousel-img' />
-                    </Slide>
+                    <div>
+                      <img src={CarouselImage} className="carousel-img" />
+                    </div>
                   );
                 })}
-              </AutoPlaySwipeableViews>
-            </ImageCarousel>
-            <HeroForeground>
-
-            </HeroForeground>
+              </Carousel>
+            </ImageCarousel> */}
+            <Logo />
+            <div className="hero-text">
+              <h1>General Contractors</h1>
+              <span className="subtitle">Odd Job Specialists</span>
+              <p>"There is no task too small, tall or odd at all!"</p>
+            </div>
+            {/* <HeroForeground /> */}
           </HeroBackground>
         </Hero>
         {/* {this.props.children} */}
-        <footer>
-          <Logo />
-        </footer>
+        <div className="cta" />
+        <footer />
       </Page>
     );
   }
 
-  componentDidMount () {
+  componentDidMount() {
     console.log('Page : componentDidMount() Mounted');
     this.setState({
       isLoaded: true

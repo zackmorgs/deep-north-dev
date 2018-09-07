@@ -1,29 +1,28 @@
 @import './../Styles/global.scss';
 @import './../Styles/utilities.scss';
+@import './../Styles/colors';
 html {
   font-size: 18px;
   color: white;
-  -webkit-font-smoothing: antialiased;
+
+  // background-blend-mode: screen;
 }
 #root {
 
-  background: radial-gradient(
-    ellipse at center,
-    rgba(0, 0, 0, 0.55) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  // position: absolute;
-  // top: 0;
-  // bottom: 0;
-  // right: 0;
-  // left: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background:$blueprintBG;
 }
 body {
   // color:white;
-    background: #1507c3;
-
+  
+  // background: $regalBlue;
+  // background:$shadeBlue;
   font-family: sans-serif;
-  font-family: 'Cormorant Garamond', sans-serif;
+  // font-family: 'Cormorant Garamond', sans-serif;
   // background-position: center;
   // position: absolute;
   // top: 0;

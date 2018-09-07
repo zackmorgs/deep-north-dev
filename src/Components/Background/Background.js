@@ -2,27 +2,27 @@ import React, { Component } from 'react';
 import './Background.css';
 // import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-let liveHeight = () => {
-  return window.screen.height;
-};
+// let liveHeight = () => {
+//   return window.screen.height;
+// };
 
 // components & contain data & link to pages
 // import Background from './../Components/Background/Background';
 
 export class Background extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       isLoaded: false,
       angle: 0
     };
   }
-  componentDidMount () {
+  componentDidMount() {
     this.setState({
       isLoaded: true
     });
   }
-  render () {
+  render() {
     let Container = {
       cssClass: 'bg'
     };
@@ -36,14 +36,14 @@ export class Background extends Component {
             : (Container.cssClass = 'bg loading')
         }
       >
-        <Blueprint>{this.props.children}</Blueprint>
+        <Blueprint />
       </div>
     );
   }
 }
 
 export class Blueprint extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -52,47 +52,141 @@ export class Blueprint extends Component {
       gridHeight: window.screen.height,
       gridWidth: window.screen.width
     };
-
-    this.gridXinterval = window.screen.width / 22;
-    this.gridYinterval = window.screen.height / 36;
-
-    this.grid = () => {
-      const x_max = window.screen.width;
-      const y_max = window.screen.height;
+    window.handleStateChange = () => {
+      this.setState({
+        isLoaded: true
+      });
     };
+    this.addLines = this.addLines.bind(this);
+    // this.grid = () => {
+    //   const x_max = window.screen.width;
+    //   const y_max = window.screen.height;
+    // };
   }
-  componentWillUnmount () {}
-  componentWillMount () {
-    // this.setState = {};
-  }
-  componentDidUpdate () {
-    console.log('should probably change gridXinterval +');
+  componentWillUnmount() {}
+  componentWillMount() {}
+  componentDidUpdate() {
+    console.log('background updated');
   }
 
-  render () {
+  componentDidMount() {
+    this.addLines();
+  }
+
+  addLines() {
+    let Rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+
+    let Y = document.getElementById('lines-y');
+    // let Y_height = Y.clientHeight;
+    let X = document.getElementById('lines-x');
+
+    let screenWidth = window.screen.width;
+    let screenHeight = window.screen.height;
+
+    let addLines = (endX, endY) => {
+      function timerAdd_Y() {
+        console.log('addlinesY', screenHeight,Y.clientHeight);
+
+        // linesY[].classList.add('loaded');
+        if (screenHeight > Y.clientHeight) {
+          Y.innerHTML += '<div class="line-y"></div>';
+        } else {
+          stopAdd_Y();
+        }
+      }
+
+      function stopAdd_Y() {
+        // Y.classList.add('loaded');
+        clearInterval(addLinesY_Interval);
+        endY();
+      }
+
+      function timerAdd_x() {
+        // console.log('addlinesX', X.clientWidth);
+
+        if (screenWidth > X.clientWidth) {
+          X.innerHTML += '<div class="line-x"></div>';
+        } else {
+          // X.classList.add('loaded');
+          stopAdd_x();
+        }
+      }
+
+      function stopAdd_x() {
+        clearInterval(addLinesX_Interval);
+        endX();
+      }
+
+      var addLinesX_Interval = setInterval(timerAdd_x, 0);
+      var addLinesY_Interval = setInterval(timerAdd_Y, 0);
+    };
+
+    let maxInterval = 2000;
+    let gridXinterval = maxInterval / (window.screen.width / Rem);
+    let gridYinterval = maxInterval / (window.screen.height / Rem);
+
+    let animate_Y = function() {
+      var linesY = document.querySelectorAll('.line-y');
+
+      var animateY_interval = setInterval(animateY_timer, gridYinterval);
+
+      var index_Y = 0;
+
+      function animateY_timer() {
+        console.log('Y', index_Y, 'of', linesY.length);
+
+        if (index_Y < linesY.length) {
+          linesY[index_Y].classList.add('loaded');
+          index_Y++;
+        } else {
+          stopAnimateY();
+        }
+      }
+
+      function stopAnimateY() {
+        // Y.classList.add('loaded');
+        clearInterval(animateY_interval);
+
+        document.getElementById('nav-main').classList.remove('nav-loading');
+        window.handleStateChange();
+      }
+    };
+
+    let animate_X = function() {
+      var animateX_interval = setInterval(animateX_timer, gridXinterval);
+      var index_X = 0;
+      var linesX = document.querySelectorAll('.line-x');
+
+      function animateX_timer() {
+        // console.log('X:', index_X, 'of', linesX.length);
+
+        if (index_X < linesX.length) {
+          linesX[index_X].classList.add('loaded');
+          index_X++;
+        } else {
+          stopAnimateX();
+        }
+      }
+
+      function stopAnimateX() {
+        clearInterval(animateX_interval);
+      }
+    };
+
+    // animate_X();
+    // animate_Y();
+
+    addLines(animate_X, animate_Y);
+  }
+
+  render() {
+    let className = this.state.isLoaded ? 'loaded' : 'loading';
     return (
-      <div id='blueprint'>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          viewBox={'0 0 ' + this.state.gridWidth + ' ' + this.state.gridHeight}
-          style={{
-            position: 'absolute',
-            top: 0,
-            bottom: 0,
-            left: 0,
-            right: 0
-          }}
-        >
-          <line y1={20} y2={80} x1={20} x2={20} strokeWidth={8} color='black' />
-        </svg>
+      <div id="blueprint" className={className}>
+        <div id="lines-y" />
+        <div id="lines-x" />
       </div>
     );
-  }
-
-  componentDidMount () {
-    this.setState({
-      isLoaded: true
-    });
   }
 }
 

@@ -1,12 +1,12 @@
 // Start on the smallest screen, work your way up.
 #logo {
     display: block;
-    padding: 0 1rem 0;
-
+    padding: 0 1rem;
+    // border:1px solid red;
 
     width: 100%;
-    max-width: 252px;
-    margin: 0 auto;
+    max-height: 13rem; 
+    margin: 0 auto 1rem; 
   svg {
     // color:white;
   }
@@ -24,7 +24,10 @@ footer {
 
 /* iPhone 6 and above */
 @media (min-width: 375px) {
+#logo {
+      max-height:15rem;
 
+}
 }
 
 @media (min-width: 414px) {
