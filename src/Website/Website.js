@@ -82,11 +82,14 @@ export default class Website extends Component {
             <Navigation id="nav-main" className={className_nav}>
               <div className="nav-container">
                 <div className="nav-toggle">
-                  <span className="icon-menu" onClick={this.handleClick}>
-                    <span id="l1" className="line" />
-                    <span id="l2" className="line" />
-                    <span id="l3" className="line" />
-                  </span>
+                  <a onClick={this.handleClick}>
+                    <label className="nav-toggle-caption">Menu</label>
+                    <span className="icon-menu">
+                      <span id="l1" className="line" />
+                      <span id="l2" className="line" />
+                      <span id="l3" className="line" />
+                    </span>
+                  </a>
                 </div>
                 <NavList
                   className={

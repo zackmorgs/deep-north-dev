@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-
-import { Phone } from 'react-feather';
+import { Phone, Mail, Facebook, Instagram } from 'react-feather';
 
 // component
 import './Home.css';
@@ -39,23 +38,29 @@ class Home extends Component {
           {/* Image backgrounds */}
           {/* <HeroBackground>
           </HeroBackground> */}
-            <Logo />
-            <div className="hero-text">
-              {/* <h1>
-                General Contracting for Toronto and the Greater Area
-              </h1> */}
-            </div>
+          <Logo />
+          <div className="hero-text">
+            <h3>Toronto - Cottage Country - GTA</h3>
+          </div>
         </Hero>
         <div className="cta">
-          <a href="tel:+6477175252" className="btn cta-telephone">
-            <Phone /> Call Us
+          <a className="btn cta-telephone" href="tel:+6477175252">
+            <Phone /> Telephone
+          </a>
+          <a className="btn" href="email:contracting@thedeepnorth.ca">
+            <Mail /> Email
+          </a>
+          <a className="btn" href="https://facebook.com/deepnorthwat">
+            <Facebook /> Facebook
+          </a>
+          <a className="btn" href="http://instagram.com/deepnorthcontracting">
+            <Instagram /> Instagram
           </a>
         </div>
         <h1>Test</h1>
         <h2>Test</h2>
         <h3>Test</h3>
         <h4>Test</h4>
-        
       </Page>
     );
   }

@@ -39,9 +39,22 @@
 }
 .nav-toggle {
   margin-left: auto;
-  text-align: center;
+  text-align: right;
   width: 100%;
+  a {
+    display:flex;
+    max-width: 6rem;
+    margin-left:auto;
+  }
+  .nav-toggle-caption {
+    font-family: 'Cormorant Garamond', serif;
+    font-size:1.5rem;
+    line-height:2rem;
+    
+    font-weight:400;
+  }
 }
+
 .nav-list {
   width: 100%;
 }
@@ -114,19 +127,19 @@
     transition-timing-function: ease-out;
   }
   #l1 {
-    top: 75% * (1/3);
+    top: 100% * (1/3);
   }
   #l2 {
-    top: 75% * (2/3);
+    top: 100% * (2/3);
   }
   #l3 {
-    top: 75% / (3/3);
+    top: 100% / (3/3);
   }
 }
 .nav-open {
   
   #l1 {
-    top: 75% * (2/3);
+    top: 100% * (2/3);
     transform: translateY(-50%) rotate(45deg);
   }
   #l2 {
