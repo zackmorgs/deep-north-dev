@@ -42,7 +42,8 @@
   bottom: 0;
 }
 
-$lineColor: rgba(255, 255, 255, 0.125);
+// $lineColor: rgba(255, 255, 255, 0.125);
+$lineColor: rgba($hotBlue, 0.666);
 
 .line-y {
   height: 1rem;
@@ -58,6 +59,7 @@ $lineColor: rgba(255, 255, 255, 0.125);
     border .25s ease-in-out;
 
 }
+$transitionOpacity: 1;
 #blueprint.loading {
   .line-x {
     border-right: 1px dashed transparent;
@@ -66,14 +68,17 @@ $lineColor: rgba(255, 255, 255, 0.125);
     float: left;
     &.loaded {
       height: 100%;
-      border-right: 1px dashed rgba(255, 255, 255, 0.33);
+      // border-right: 1px dashed rgba(255, 255, 255, 0.2);
+      border-right: 1px dashed rgba($hotBlue, $transitionOpacity);
     }
   }
   .line-y {
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.33);
+    // border-bottom: 1px dashed rgba(255, 255, 255, $transitionOpacity);
+    border-bottom: 1px dashed rgba($hotBlue, $transitionOpacity);
 
     &.loaded {
-      border-bottom: 1px dashed rgba(255, 255, 255, 0.33);
+      // border-bottom: 1px dashed rgba(255, 255, 255, $transitionOpacity);
+      border-bottom: 1px dashed rgba($hotBlue, $transitionOpacity);
     }
   }
 }

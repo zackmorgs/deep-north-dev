@@ -13,7 +13,7 @@ import './Website.css';
 import './Type.css';
 import './Navigation.css';
 
-import { Info, Mail, Briefcase } from 'react-feather';
+import { Home as IconHome, Info, Mail, DollarSign } from 'react-feather';
 
 // data
 
@@ -21,7 +21,7 @@ import { Info, Mail, Briefcase } from 'react-feather';
 import Home from '../Pages/Home/Home';
 import About from '../Pages/About/About';
 import Contact from '../Pages/Contact/Contact';
-import Services from '../Pages/Services/Services';
+import QuoteRequest from '../Pages/QuoteRequest/QuoteRequest';
 
 // components
 import Container from '../Components/Container/Container';
@@ -76,20 +76,17 @@ export default class Website extends Component {
 
     return (
       <Container id="deep-north">
-        <Background onLoad={this.handleBackgroundLoaded} />
+        {/* <Background onLoad={this.handleBackgroundLoaded} /> */}
         <Router>
           <Frame>
             <Navigation id="nav-main" className={className_nav}>
               <div className="nav-container">
                 <div className="nav-toggle">
-                  <a onClick={this.handleClick}>
-                    <label className="nav-toggle-caption">Menu</label>
-                    <span className="icon-menu">
-                      <span id="l1" className="line" />
-                      <span id="l2" className="line" />
-                      <span id="l3" className="line" />
-                    </span>
-                  </a>
+                  <span className="icon-menu" onClick={this.handleClick}>
+                    <span id="l1" className="line" />
+                    <span id="l2" className="line" />
+                    <span id="l3" className="line" />
+                  </span>
                 </div>
                 <NavList
                   className={
@@ -100,11 +97,12 @@ export default class Website extends Component {
                   <NavItem>
                     <NavLink to={'/'}>
                       <div className="icon">
-                        <Info />
+                        <IconHome />
                       </div>
                       <span className="caption">Home</span>
                     </NavLink>
                   </NavItem>
+
                   <NavItem>
                     <NavLink to={'/about'}>
                       <div className="icon">
@@ -113,20 +111,13 @@ export default class Website extends Component {
                       <span className="caption">About</span>
                     </NavLink>
                   </NavItem>
+
                   <NavItem>
-                    <NavLink to={'/services'}>
+                    <NavLink to={'/request-estimate'}>
                       <div className="icon">
-                        <Briefcase />
+                        <DollarSign />
                       </div>
-                      <span className="caption">Services</span>
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink to={'/contact'}>
-                      <div className="icon">
-                        <Mail />
-                      </div>
-                      <span className="caption">Contact Us</span>
+                      <span className="caption">Request an Estimate</span>
                     </NavLink>
                   </NavItem>
                 </NavList>
@@ -138,11 +129,16 @@ export default class Website extends Component {
                 <Route path="/" exact component={Home} />
                 <Route path="/about/" component={About} />
                 <Route path="/contact/" component={Contact} />
-                <Route path="/services/" component={Services} />
+                <Route path="/quoterequest/" component={QuoteRequest} />
+                {/* <Route path="/quoterequest/" component={QuoteRequest} /> */}
               </Switch>
+              <footer>&copy; Copyright 2018. Deep North Contracting</footer>
             </main>
           </Frame>
         </Router>
+        {/* <footer>
+          <span>2018</span>
+        </footer> */}
       </Container>
     );
   }

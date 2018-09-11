@@ -3,17 +3,30 @@
 /* (iPhone 5 Portrait [320px]) */
 
 /* iPhone 6 and above */
-@media (min-width: 375px) {
+@media (min-width: 375px ) {
+  @media (orientation: portrait) {
 
+  }
 }
 
 @media (min-width: 414px) {
-
+  @media (orientation: portrait) {
+    
+  }
 }
+
+/* Some larger smartphones in portrait mode */
+@media (min-width: 515px) {
+  @media (orientation: portrait) {
+    
+  }
+} 
 
 /* Small devices (landscape phones, 544px and up) */
 @media (min-width: 544px) {
-
+  @media (orientation: portrait) {
+    
+  }
 } 
 
 /* Small devices (landscape phones, 544px and up) */

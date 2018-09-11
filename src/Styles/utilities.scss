@@ -4,33 +4,6 @@
   display: none;
 }
 
-.btn {
-  border: 0.15rem solid white;
-  padding:(0.5rem) 0;
-  margin:0 0 (1rem  - 0.15rem);
-  display: block;
-  z-index: 2;
-  font-size: 0.8rem;
-  font-weight:600;
-  text-decoration: none;
-  color: inherit;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1.115pt;
-  z-index: 0;
-  text-align: center;
-
-  &:active {
-    background: $hotBlue;
-  }
-
-  svg {
-    height:1.5rem;
-    width:auto;
-    display:block;
-    margin: 0 auto 0.5rem;
-  }
-}
 
 [viewBox='0 0 24 24'] {
   // height:2rem;

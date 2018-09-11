@@ -1,13 +1,5 @@
 import React, { Component } from 'react';
 import './Background.css';
-// import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
-// let liveHeight = () => {
-//   return window.screen.height;
-// };
-
-// components & contain data & link to pages
-// import Background from './../Components/Background/Background';
 
 export class Background extends Component {
   constructor(props) {

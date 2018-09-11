@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 import Page from '../../Components/Page/Page';
 import ServiceList from './../../Data/services.json';
 
-import './Services.css';
+import './QuoteRequest.css';
 
-export class Service extends Component {
-  constructor (props) {
+export class QuoteRequest extends Component {
+  constructor(props) {
     super(props);
     this.Container = {
       CssClass: ''
@@ -19,28 +19,25 @@ export class Service extends Component {
 
   // }
 
-  render () {
+  render() {
     // this.Container.CssClass;
     return (
-      <Page >
+      <Page>
         <header>
-          <h1>Services</h1>
+          <h1>Request a Quote</h1>
         </header>
-        <section id='services' className={this.Container.CssClass}>
-          <ul className='list-service'>
+        <section id="services" className={this.Container.CssClass}>
+          {/* <ul className="list-service">
             {ServiceList.map((Service, Index) => {
-              return (
-
-                <li key={Index}>
-                  {Service}
-                </li>
-              );
+              return <li key={Index}>{Service}</li>;
             })}
-          </ul>
+          </ul> */}
+          <h1>Request a Quote</h1>
+          <p>:D ill do this later</p>
         </section>
       </Page>
     );
   }
 }
 
-export default Service;
+export default QuoteRequest;

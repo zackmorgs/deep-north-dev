@@ -1,4 +1,25 @@
+@import './../../Styles/colors';
 
+.ui-location {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem .5rem;
+  margin-bottom: 1rem;
+  // background: grey;
+  border-radius: .5rem;
+
+  // border: 2px solid white;
+}
+
+.location-text {
+  margin-top: 0.5rem;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.location-icon {
+  // color:$blueprintBG;
+}
 
 // Start on the smallest screen, work your way up.
 
@@ -6,13 +27,28 @@
 
 /* iPhone 6 and above */
 @media (min-width: 375px) {
+  @media (orientation: portrait) {
+  }
 }
 
 @media (min-width: 414px) {
+  @media (orientation: portrait) {
+  }
+}
+
+/* Some larger smartphones in portrait mode */
+@media (min-width: 515px) {
+  @media (orientation: portrait) {
+  }
 }
 
 /* Small devices (landscape phones, 544px and up) */
 @media (min-width: 544px) {
+  .ui-location {
+    border: initial;
+  }
+  @media (orientation: portrait) {
+  }
 }
 
 /* Small devices (landscape phones, 544px and up) */
@@ -26,7 +62,9 @@
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
 }
-
+/* iPad Pro */
+@media (min-width: 1024px) {
+}
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 }

@@ -6,12 +6,7 @@
   // background: black;
   padding: 1rem;
   z-index: 3;
-  transition: 
-    transform 0.25s,
-    opacity 0.5s, 
-    top 0.25s, left 
-    0.25s, 
-    right 0.5s,
+  transition: transform 0.25s, opacity 0.5s, top 0.25s, left 0.25s, right 0.5s,
     bottom 0.5s;
   opacity: 1;
   transform: translateY(0%);
@@ -21,10 +16,9 @@
   }
 
   &.nav-open {
-
-    height:100%;
+    height: 100%;
     transform: translateY(0%);
-    
+
     position: sticky;
     top: 0;
     right: 0;
@@ -42,16 +36,16 @@
   text-align: right;
   width: 100%;
   a {
-    display:flex;
+    display: flex;
     max-width: 6rem;
-    margin-left:auto;
+    margin-left: auto;
   }
   .nav-toggle-caption {
     font-family: 'Cormorant Garamond', serif;
-    font-size:1.5rem;
-    line-height:2rem;
-    
-    font-weight:400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    font-weight: 400;
   }
 }
 
@@ -61,11 +55,11 @@
 
 .nav-link {
   text-decoration: none;
-  font-size:1.25rem;
+  font-size: 1.25rem;
 
   transition: transform 0.25s, opacity 0.25s, top 0.25s, left 0.25s, right 0.5s;
   display: block;
-  margin:1rem;
+  margin: 1rem;
   .icon {
     text-align: center;
     display: block;
@@ -82,7 +76,7 @@
   }
 
   .caption {
-    font-family:'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     display: block;
     color: white;
 
@@ -137,7 +131,6 @@
   }
 }
 .nav-open {
-  
   #l1 {
     top: 100% * (2/3);
     transform: translateY(-50%) rotate(45deg);
@@ -146,7 +139,7 @@
     opacity: 0;
   }
   #l3 {
-    top: 75% * (2/3);
+    top: 100% * (2/3);
     transform: translateY(-50%) rotate(-45deg);
   }
 }

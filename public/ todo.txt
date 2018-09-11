@@ -1,0 +1,37 @@
+todo:
+- whatever jerry wants
+
+Illustrator Stuff
+- Fix dat Logo
+- Favicon
+
+Code
+- Hookup cloudflare for free ddos protection and optimized dns 
+  - https://dash.cloudflare.com/sign-up
+- W3C Validation: https://validator.w3.org/
+- "Request Estimate" page -> goes to nothing rn, short term fix straight email link. 
+  - then add pre-filled content for email to jerry.
+- 
+- Add footer with copyright
+- Background is salvagable imo if 
+  - color change to blue possibly? in beta rn
+  - faster animation time for whole grid
+  - make content appear after the animation runs, fade in / slide up type thing
+  - A/B Tested
+
+Code SEO Stuff
+- Add Google Analytics to Page
+- Meta Tag Optimization
+  - List of Meta Tags: 
+    - https://www.youtube.com/watch?v=ClXTdjsXKFU <-- easy explanation
+    - https://youtu.be/RBTBEfd7z_Y <-- straight from googles
+- Enable Facebook's OpenGraph for Facebook Sharing of DN Links
+  - general explanation: https://www.youtube.com/watch?v=4Q207Z-HkUo&t=4s
+  - https://developers.facebook.com/docs/sharing/best-practices
+
+- Check this bitch out in Google Search Console and see if theres stuff we need in there.
+
+Social
+- https://hootsuite.com/ is ideal, pitch to jerr
+- Initialize Google plus prescence, default autopost instagram posts?
+- Init Facebook page, default autopost instagram posts?

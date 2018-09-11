@@ -1,7 +1,7 @@
 @import './../../Styles/colors';
 
 .hero {
-  padding: 1rem 0;
+  padding: 1rem 0 1rem;
   z-index: 0;
   text-align: center;
   margin-bottom:2rem - 0.107rem;
@@ -83,3 +83,12 @@
 //     color: $shadeRed;
 //   }
 // }
+.hero-text {
+  h1 {
+    margin-top:2.5rem;
+  }
+}
+hr {
+  max-width:30rem;
+  max-width:18rem;
+}

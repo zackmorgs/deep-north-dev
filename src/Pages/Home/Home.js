@@ -16,6 +16,15 @@ import Hero, {
   HeroForeground,
   HeroBackground
 } from './../../Components/Hero/Hero';
+import Location from './../../Components/Location/Location';
+
+import CallToAction from './../../Components/CallToAction/CallToAction';
+import {
+  Button,
+  ButtonIcon,
+  ButtonText
+} from './../../Components/Button/Button';
+
 // import TextCarousel from './../../Components/ImageCarousel/ImageCarousel';
 // import ImageCarousel, {
 //   Slide
@@ -39,28 +48,71 @@ class Home extends Component {
           {/* <HeroBackground>
           </HeroBackground> */}
           <Logo />
+          {/* FIX THE LOGO
+            - top right horn 1 less pokey
+            - ear go up
+            - shoulders make liek other logo.
+            - hammers? hammers.
+           */}
           <div className="hero-text">
-            <h3>Toronto - Cottage Country - GTA</h3>
+            <h1>General Contractors</h1>
+            <blockquote>
+              <h2 className="subtitle">Odd Job Specialists</h2>
+            </blockquote>
+            <Location>
+              Toronto &middot; Cottage Country &middot; Greater Area
+            </Location>
+            <div className="cta">
+              <Button kind='primary'>
+                <ButtonText>Learn More</ButtonText>
+              </Button>
+            </div>
           </div>
         </Hero>
-        <div className="cta">
-          <a className="btn cta-telephone" href="tel:+6477175252">
-            <Phone /> Telephone
-          </a>
-          <a className="btn" href="email:contracting@thedeepnorth.ca">
-            <Mail /> Email
-          </a>
-          <a className="btn" href="https://facebook.com/deepnorthwat">
-            <Facebook /> Facebook
-          </a>
-          <a className="btn" href="http://instagram.com/deepnorthcontracting">
-            <Instagram /> Instagram
-          </a>
-        </div>
-        <h1>Test</h1>
-        <h2>Test</h2>
-        <h3>Test</h3>
-        <h4>Test</h4>
+        <CallToAction className="cta social">
+          <Button
+            id="cta-btn-telephone"
+            href="tel:+6477175252"
+            alt="Give Us a Call"
+          >
+            <ButtonIcon>
+              <Phone />
+            </ButtonIcon>
+            <ButtonText>Telephone</ButtonText>
+          </Button>
+
+          <Button
+            id="cta-btn-email"
+            href="mailto:contracting@thedeepnorth.ca"
+            alt="Email Us"
+          >
+            <ButtonIcon>
+              <Mail />
+            </ButtonIcon>
+            <ButtonText>Email</ButtonText>
+          </Button>
+
+          <Button
+            id="cta-btn-facebook"
+            href="http://instagram.com/deepnorthcontracting"
+            alt="Visit Our Facebook"
+          >
+            <ButtonIcon>
+              <Facebook />
+            </ButtonIcon>
+            <ButtonText>Facebook</ButtonText>
+          </Button>
+
+          <Button
+            id="cta-btn-facebook"
+            href="http://instagram.com/deepnorthcontracting"
+          >
+            <ButtonIcon>
+              <Instagram />
+            </ButtonIcon>
+            <ButtonText>Instagram</ButtonText>
+          </Button>
+        </CallToAction>
       </Page>
     );
   }

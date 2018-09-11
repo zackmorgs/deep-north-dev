@@ -1,9 +1,14 @@
-@import './RootEM.scss';
+@import './../Styles/colors';
+
+:root {
+  font-size: 18px;
+}
 :root {
   font-family: 'Montserrat', serif;
-  color: white;
   text-rendering: optimizeLegibility;
- -webkit-font-smoothing:antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  color:white;
 }
 blockquote:before {
   content: open-quote;
@@ -11,13 +16,45 @@ blockquote:before {
 blockquote:after {
   content: close-quote;
 }
-h1, h2, h3, [class^='title'] { 
+h1,
+h2,
+h3,
+[class^='title'] {
   font-family: 'Cormorant Garamond', serif;
+  font-variant-ligatures: historical-ligatures;
+  font-feature-settings: 'kern' 1, 'liga' 2;
 }
 h1 {
-  font-size:3rem;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  line-height: 2.88888889rem;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-variant-ligatures: historical-ligatures;
+  // color:$woahRed;
+
 }
 h2 {
-  font-size:2rem;
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
-
+h3 {
+  font-size: 1.5rem;
+  &.subtitle {
+  }
+}
+footer {
+  text-transform: uppercase;
+  margin-top: 6rem;
+  font-size: 0.5rem;
+  color: lightgrey;
+  font-weight: bolder;
+}
+p {
+  padding-top:1rem;
+  line-height:1.5rem;
+  // font-family: 'Cormorant Garamond', serif;
+  // font-size:20px;
+  font-weight: normal;
+}

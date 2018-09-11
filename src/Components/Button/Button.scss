@@ -1,31 +1,37 @@
-@import './../Styles/global.scss';
-@import './../Styles/utilities.scss';
-@import './../Styles/colors';
+@import './../../Styles/colors';
 
-html {
-}
-
-body {
-  // background:$blueprintBG;
-  // background:$shadierBlue;
-  background: black;
-}
-
-.frame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow-y: scroll;
-  // border:.15rem solid white;
-  max-width: 56rem;
+.btn {
+  border: 2px solid white;
+  padding: (0.5rem) 0;
   margin: 0 auto;
+  // margin:0 0 (1rem  - 0.15rem);
+  display: block;
+  z-index: 2;
+
+  &:active {
+    // background: $hotBlue;
+  }
+
+  svg {
+    height: 1.5rem;
+    width: auto;
+    display: block;
+    margin: 0 auto 0.5rem;
+  }
+
+  &.primary {
+    // background-color:$green;
+  }
+}
+.btn-text {
+  display: none;
+}
+.btn-icon {
 }
 
-.hide-mobile {
-}
+// Start on the smallest screen, work your way up.
 
+/* (iPhone 5 Portrait [320px]) */
 
 /* iPhone 6 and above */
 @media (min-width: 375px) {
@@ -46,18 +52,15 @@ body {
 
 /* Small devices (landscape phones, 544px and up) */
 @media (min-width: 544px) {
-  .frame {
-    overflow-y: initial;
-  }
   @media (orientation: portrait) {
-    .frame {
-      overflow-y: initial;
-    }
   }
 }
 
 /* Small devices (landscape phones, 544px and up) */
 @media (min-width: 544px) {
+  .btn {
+    max-width: calc(56rem / 5);
+  }
 }
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
@@ -66,6 +69,26 @@ body {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .btn {
+    border: initial;
+  }
+  .btn-text {
+    display: initial;
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.115pt;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .btn-icon {
+    svg {
+      width: 2rem;
+      height: auto;
+    }
+  }
 }
 /* iPad Pro */
 @media (min-width: 1024px) {

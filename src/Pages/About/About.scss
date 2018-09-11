@@ -1,44 +1,9 @@
-#homepage {
-  // padding: 1rem;
-  overflow-y: scroll;
-  // border: 8px solid #d7a03d;
-  margin: 0 1rem;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  // opacity:0;
+header {
+  border-bottom:2px solid white;
+  padding-bottom:1rem;
 }
-// .background {
-//   background: black;
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   left: 0;
-//   bottom: 0;
-//   z-index: 0;
-// }
 
 
-blockquote:before {
-  content: open-quote;
-}
-blockquote:after {
-  content: close-quote;
-}
-h3 {
-  font-size: 1.25rem;
-  font-weight: 500;
-}
-h4 {
-  text-align: center;
-  font-size: 1.5rem;
-  width: 100%;
-  border-bottom: 3px solid white;
-  padding: 0.25rem 0 0.25rem;
-  margin: 0 0 0.5rem;
-}
 // Start on the smallest screen, work your way up.
 
 /* (iPhone 5 Portrait [320px]) */
