@@ -61,9 +61,9 @@ class Home extends Component {
             </blockquote>
             <Location>
               Toronto &middot; Cottage Country &middot; Greater Area
-            </Location>
+            </Location> 
             <div className="cta">
-              <Button kind='primary'>
+              <Button kind='primary' href='/about'>
                 <ButtonText>Learn More</ButtonText>
               </Button>
             </div>

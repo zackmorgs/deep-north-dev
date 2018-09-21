@@ -5,7 +5,7 @@ import { Switch } from 'react-router';
 import {
   BrowserRouter as Router,
   Route,
-  NavLink,
+  Link,
   Redirect
 } from 'react-router-dom';
 // ui
@@ -95,32 +95,42 @@ export default class Website extends Component {
                   }
                 >
                   <NavItem>
-                    <NavLink to={'/'}>
+                    <Link to={'/'}>
                       <div className="icon">
                         <IconHome />
                       </div>
                       <span className="caption">Home</span>
-                    </NavLink>
+                    </Link>
                   </NavItem>
 
                   <NavItem>
-                    <NavLink to={'/about'}>
+                    <Link to={'/about'}>
                       <div className="icon">
                         <Info />
                       </div>
                       <span className="caption">About</span>
-                    </NavLink>
+                    </Link>
                   </NavItem>
 
                   <NavItem>
-                    <NavLink to={'/request-estimate'}>
+                    <Link to={'/contact'}>
+                      <div className="icon">
+                        <Mail />
+                      </div>
+                      <span className="caption">Contact</span>
+                    </Link>
+                  </NavItem>
+
+                  <NavItem>
+                    <Link to={'/request-estimate'}>
                       <div className="icon">
                         <DollarSign />
                       </div>
                       <span className="caption">Request an Estimate</span>
-                    </NavLink>
+                    </Link>
                   </NavItem>
                 </NavList>
+
               </div>
             </Navigation>
 
@@ -192,8 +202,8 @@ NavItem.defaultProps = {
   className: 'nav-item'
 };
 
-// NavLink defined by react-router
-NavLink.defaultProps = {
+// Link defined by react-router
+Link.defaultProps = {
   className: 'nav-link',
   activeClassName: 'link-selected',
   onClick: () => {

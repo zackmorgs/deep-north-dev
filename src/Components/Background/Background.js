@@ -88,7 +88,7 @@ export class Blueprint extends Component {
         endY();
       }
 
-      function timerAdd_x() {
+      function timerAdd_X() {
         // console.log('addlinesX', X.clientWidth);
 
         if (screenWidth > X.clientWidth) {
@@ -104,8 +104,9 @@ export class Blueprint extends Component {
         endX();
       }
 
-      var addLinesX_Interval = setInterval(timerAdd_x, 0);
-      var addLinesY_Interval = setInterval(timerAdd_Y, 0);
+
+      var addLinesX_Interval = setInterval(timerAdd_X, 10);
+      var addLinesY_Interval = setInterval(timerAdd_Y, 10);
     };
 
     let maxInterval = 2000;

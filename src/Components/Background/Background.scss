@@ -1,5 +1,7 @@
 @import './../../Styles/colors';
 
+$bggridSpacing: 1rem;
+
 .bg {
   position: absolute;
   top: 0;
@@ -9,6 +11,8 @@
   overflow: hidden;
   z-index: 0;
   // background:$hotBlue;
+
+  opacity: 1;
 }
 
 #blueprint-bg {
@@ -35,7 +39,6 @@
   top: 0;
   left: 0;
   right: 0;
-
 }
 #lines-x {
   top: 0;
@@ -46,32 +49,35 @@
 $lineColor: rgba($hotBlue, 0.666);
 
 .line-y {
-  height: 1rem;
+  height: $bggridSpacing;
   width: 0;
   &.loaded {
     width: 100%;
   }
 }
-.line-y, .line-x {
-  transition: 
-    width .25s ease-in-out, 
-    height .25s ease-in-out, 
-    border .25s ease-in-out;
-
+.line-y,
+.line-x {
+  transition: width 0.25s ease-in-out, height 0.25s ease-in-out,
+    border 0.25s ease-in-out;
 }
 $transitionOpacity: 1;
 #blueprint.loading {
   .line-x {
     border-right: 1px dashed transparent;
-    width: 1rem;
+    width: $bggridSpacing;
     height: 0;
     float: left;
+
     &.loaded {
       height: 100%;
       // border-right: 1px dashed rgba(255, 255, 255, 0.2);
       border-right: 1px dashed rgba($hotBlue, $transitionOpacity);
+      &:nth-child(odd) {
+        opacity: 0.5;
+      }
     }
   }
+
   .line-y {
     // border-bottom: 1px dashed rgba(255, 255, 255, $transitionOpacity);
     border-bottom: 1px dashed rgba($hotBlue, $transitionOpacity);
@@ -84,17 +90,33 @@ $transitionOpacity: 1;
 }
 #blueprint.loaded {
   .line-x {
-    width: 1rem;
+    width: $bggridSpacing;
     height: 0;
     float: left;
     &.loaded {
       height: 100%;
-      border-right: 1px dashed $lineColor;
+      border-right: 
+       1px 
+       dotted 
+       lighten($lineColor, 5.0);
+
     }
   }
   .line-y {
     &.loaded {
-      border-bottom: 1px dashed $lineColor;
+      border-bottom: 1px solid $lineColor;
+    }
+  }
+  .loaded {
+    &:nth-child(odd) {
+      opacity: 0.75;
+      border-style: solid;
+    }
+    &:nth-child(even) {
+      opacity: 0.5;
+      border-image: url('/');
+      border-image-repeat: repeat;
+      border-image-slice:0 100%;
     }
   }
 }

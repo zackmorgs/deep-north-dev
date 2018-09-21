@@ -14,9 +14,10 @@ export class About extends Component {
         <header>
           <h1>About</h1>
           <h2 className="subtitle">
-            There is no task too small, tall or odd at all!
+            &ldquo;No task too small, tall or odd at all&rdquo;
           </h2>
         </header>
+
         <p>
           Deep North Contracting is a General Contacting company founded by
           Daniel Tracy in 2015.
@@ -28,10 +29,13 @@ export class About extends Component {
         <p>
           We've floored apartments, layed tile for restaurants, drywalled
           bedrooms, renovated offices, demolished roofs, and even built pop-up
-          shows for famous musical artists like Kanye West, Pusha-T and The Weeknd.
+          shows for famous musical artists like Kanye West, Pusha-T and The
+          Weeknd.
         </p>
         <p>
-          We're based in Toronto, but we work all over the place. Don't hesitate to <a href="mailto:contracting@thedeepnorth.ca">contact us</a> for any and all queries.
+          We're based in Toronto, but we work all over the place. Don't hesitate
+          to <a href="mailto:contracting@thedeepnorth.ca">contact us</a> for any
+          and all queries.
         </p>
       </Page>
     );

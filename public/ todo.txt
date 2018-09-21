@@ -6,22 +6,12 @@ Illustrator Stuff
 - Favicon
 
 Code
-- Hookup cloudflare for free ddos protection and optimized dns 
-  - https://dash.cloudflare.com/sign-up
 - W3C Validation: https://validator.w3.org/
 - "Request Estimate" page -> goes to nothing rn, short term fix straight email link. 
   - then add pre-filled content for email to jerry.
-- 
-- Add footer with copyright
-- Background is salvagable imo if 
-  - color change to blue possibly? in beta rn
-  - faster animation time for whole grid
-  - make content appear after the animation runs, fade in / slide up type thing
-  - A/B Tested
 
 Code SEO Stuff
-- Add Google Analytics to Page
-- Meta Tag Optimization
+- Meta Tag Optimization (kinda done - we'll see what google search console says)
   - List of Meta Tags: 
     - https://www.youtube.com/watch?v=ClXTdjsXKFU <-- easy explanation
     - https://youtu.be/RBTBEfd7z_Y <-- straight from googles

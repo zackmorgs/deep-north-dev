@@ -1,0 +1,15 @@
+ul {
+  line-height:2rem;
+  padding:1rem;
+  a {
+    color:white;
+    text-decoration: none;
+    .icon {
+      display:block;
+      max-width:1rem;
+    }
+    &:visited {
+      color:white;
+    }
+  }
+}

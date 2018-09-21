@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { MapPin } from 'react-feather';
 import './Location.css';
 

@@ -10,6 +10,8 @@
     bottom 0.5s;
   opacity: 1;
   transform: translateY(0%);
+  // background: black;
+
   &.nav-loading {
     transform: translateX(100%);
     opacity: 0;
@@ -29,6 +31,8 @@
       right 0.5s, bottom 0.5s;
 
     // background: black;
+
+    overflow-y: scroll;
   }
 }
 .nav-toggle {
@@ -77,6 +81,8 @@
 
   .caption {
     font-family: 'Montserrat', sans-serif;
+    // font-family: 'Cormorant Garamond', serif;
+
     display: block;
     color: white;
 
@@ -85,8 +91,8 @@
     padding: 0 0 1rem;
   }
   .icon {
-    padding: 1rem;
-    max-width: 4rem;
+    padding: 0.5rem;
+    max-width: 3rem;
     margin: 0 auto;
     svg {
       width: 100%;
@@ -97,7 +103,8 @@
 }
 .nav-open {
   .nav-link {
-    opacity: 1;
+    opacity: 1.0;
+    transition: opacity 1s 
   }
 }
 
@@ -131,6 +138,7 @@
   }
 }
 .nav-open {
+  // nav-toggle lines.
   #l1 {
     top: 100% * (2/3);
     transform: translateY(-50%) rotate(45deg);
@@ -142,6 +150,8 @@
     top: 100% * (2/3);
     transform: translateY(-50%) rotate(-45deg);
   }
+
+
 }
 
 // Start on the smallest screen, work your way up.
@@ -169,6 +179,10 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  #nav-main {
+    margin: 0 -100%;
+    padding: 1rem 100%;
+  }
 }
 /* iPad Pro */
 @media (min-width: 1024px) {
