@@ -1,110 +1,118 @@
-@import './../Styles/colors';
+@import './../../Styles/colors';
+
+$navTransitionTiming1: 0.25s;
 
 #nav-main {
+  z-index: 3;
+  // transition: transform $navTransitionTiming1, opacity 0.5s,
+  //   top $navTransitionTiming1, left $navTransitionTiming1, right 0.5s,
+  //   bottom 0.5s;
   position: sticky;
   top: 0;
-  // background: black;
-  padding: 1rem;
-  z-index: 3;
-  transition: transform 0.25s, opacity 0.5s, top 0.25s, left 0.25s, right 0.5s,
-    bottom 0.5s;
+  // right: 0;
+  // left: 0;
   opacity: 1;
   transform: translateY(0%);
-  // background: black;
-
-  &.nav-loading {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-
-  &.nav-open {
-    height: 100%;
-    transform: translateY(0%);
-
-    position: sticky;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    // padding: .5rem;
-    transition: transform 0.25s, opacity 0.25s, top 0.25s, left 0.25s,
-      right 0.5s, bottom 0.5s;
-
-    // background: black;
-
-    overflow-y: scroll;
-  }
+  // padding: 0;
 }
+.nav-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+}
+.nav-loading {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.nav-open {
+  height: 100%;
+  transform: translateY(0%);
+
+  // transition: transform $navTransitionTiming1, opacity $navTransitionTiming1,
+  //   top $navTransitionTiming1, left $navTransitionTiming1, right 0.5s,
+  //   bottom 0.5s;
+  background: black;
+  overflow-y: scroll;
+}
+
 .nav-toggle {
   margin-left: auto;
   text-align: right;
   width: 100%;
+  padding: 1rem;
+  cursor:pointer;
+ 
   a {
     display: flex;
     max-width: 6rem;
     margin-left: auto;
   }
-  .nav-toggle-caption {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    line-height: 2rem;
-
-    font-weight: 400;
-  }
 }
 
 .nav-list {
   width: 100%;
+  max-width:52rem;
+  padding: 0;
+  margin: 4rem auto 0;
+
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+.nav-list-hidden {
+  // padding: 0;
+  height: 0px;
+  overflow-y: hidden;
+  transform: translateY(100%);
 }
 
-.nav-link {
-  text-decoration: none;
-  font-size: 1.25rem;
+.nav-list-show {
+  opacity: 1;
+  transform: translateY(0%);
+  // display:flex;
+}
+.nav-item {
+  display:block;
+  flex-grow: 1;
 
-  transition: transform 0.25s, opacity 0.25s, top 0.25s, left 0.25s, right 0.5s;
-  display: block;
-  margin: 1rem;
+  justify-content: space-around;
+  // flex-shrink: 2;
+}
+.nav-link {
+  font-size: 2rem;
+  transition: transform $navTransitionTiming1, opacity $navTransitionTiming1,
+    top $navTransitionTiming1, left $navTransitionTiming1, right 0.5s;
+  display: flex;
+  padding: 0.5rem 1rem;
   .icon {
-    text-align: center;
-    display: block;
     svg {
-      color: white;
-      transform: translateY(1px);
+      width: auto;
+      height: 1em;
+      stroke-width: 2px;
     }
   }
-
-  opacity: 0;
-
+  
   &:active {
     background: $shadeBlue;
   }
-
+  &:hover {
+    background: $shadeBlue;
+  }
   .caption {
     font-family: 'Montserrat', sans-serif;
-    // font-family: 'Cormorant Garamond', serif;
-
+    text-transform: uppercase;
     display: block;
     color: white;
-
-    margin: 0 auto;
-    text-align: center;
-    padding: 0 0 1rem;
-  }
-  .icon {
-    padding: 0.5rem;
-    max-width: 3rem;
-    margin: 0 auto;
-    svg {
-      width: 100%;
-      height: auto;
-      padding-bottom: 0.5rem;
-    }
+    text-align: right;
+    margin-left: 1rem;
   }
 }
-.nav-open {
+
+.nav-list-show {
   .nav-link {
-    opacity: 1.0;
-    transition: opacity 1s 
+    opacity: 1;
+    transition: opacity 0.5s;
   }
 }
 
@@ -137,7 +145,9 @@
     top: 100% / (3/3);
   }
 }
-.nav-open {
+
+// Nav Hamburger
+.toggle-is-toggled {
   // nav-toggle lines.
   #l1 {
     top: 100% * (2/3);
@@ -150,8 +160,6 @@
     top: 100% * (2/3);
     transform: translateY(-50%) rotate(-45deg);
   }
-
-
 }
 
 // Start on the smallest screen, work your way up.
@@ -175,13 +183,17 @@
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
+  .nav-link {
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  // #nav-main {
+  //   margin: 0 -100%;
+  //   padding: 1rem 100%;
+  // }
   #nav-main {
-    margin: 0 -100%;
-    padding: 1rem 100%;
   }
 }
 /* iPad Pro */

@@ -1,31 +1,20 @@
-@import './../Styles/global.scss';
-@import './../Styles/utilities.scss';
-@import './../Styles/colors';
-
-html {
+p {
+  // padding: 0.5rem 0 0.25rem;
+  // margin: 0.25rem auto 0.25rem;
+  padding:1rem 0 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-size:1.25rem;
+  font-family: 'Cormorant Garamond', serif;
+  
+  a {
+    color: #2b3cc7;
+    text-decoration: none;
+    font-weight:bold;
+  }
 }
 
-body {
-  // background:$blueprintBG;
-  // background:$shadierBlue;
-  background: black;
-}
-
-.frame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow-y: scroll;
-  // border:.15rem solid white;
-  max-width: 56rem;
-  margin: 0 auto;
-}
-
-.hide-mobile {
-}
-
+/* (iPhone 5 Portrait [320px]) */
 
 /* iPhone 6 and above */
 @media (min-width: 375px) {
@@ -46,13 +35,7 @@ body {
 
 /* Small devices (landscape phones, 544px and up) */
 @media (min-width: 544px) {
-  .frame {
-    overflow-y: initial;
-  }
   @media (orientation: portrait) {
-    .frame {
-      overflow-y: initial;
-    }
   }
 }
 
@@ -62,6 +45,7 @@ body {
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
+  
 }
 
 /* Large devices (desktops, 992px and up) */

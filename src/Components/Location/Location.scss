@@ -3,10 +3,10 @@
 .ui-location {
   display: inline-block;
   margin-top: 1rem;
-  padding: 0.75rem 1rem .5rem;
+  padding: 0.75rem 1rem 0.5rem;
   margin-bottom: 1rem;
   // background: grey;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 
   // border: 2px solid white;
 }
@@ -17,13 +17,14 @@
   font-weight: 500;
   i {
     font-family: 'Coromont Garamond';
-    display:block;
+    display: block;
     font-style: italic;
   }
 }
 
 .location-icon {
   // color:$blueprintBG;
+  display: none;
 }
 
 // Start on the smallest screen, work your way up.
@@ -50,7 +51,7 @@
 /* Small devices (landscape phones, 544px and up) */
 @media (min-width: 544px) {
   .ui-location {
-    border: initial;
+    // border: initial;
   }
   @media (orientation: portrait) {
   }
@@ -62,6 +63,9 @@
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
+  .location-icon {
+    display: initial;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */

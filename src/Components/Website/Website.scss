@@ -1,0 +1,104 @@
+@import './../../Styles/global.scss';
+@import './../../Styles/utilities.scss';
+@import './../../Styles/colors';
+
+html {
+}
+
+body {
+  // background:$blueprintBG;
+  // background:$shadierBlue;
+  background: black;
+}
+
+.frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  // border:.15rem solid white;
+  // max-width: 56rem;
+  margin: 0 auto;
+}
+
+main {
+  max-width: 56rem;
+  margin: 4rem auto 1rem;
+}
+
+.hide-mobile {
+}
+
+ul {
+  line-height: 2rem;
+  padding: 1rem;
+  a {
+    color: white;
+    text-decoration: none;
+    .icon {
+      display: block;
+      // max-width:1rem;
+    }
+    &:visited {
+      color: white;
+    }
+
+  }
+}
+
+/* iPhone 6 and above */
+@media (min-width: 375px) {
+  @media (orientation: portrait) {
+  }
+}
+
+@media (min-width: 414px) {
+  @media (orientation: portrait) {
+  }
+}
+
+/* Some larger smartphones in portrait mode */
+@media (min-width: 515px) {
+  @media (orientation: portrait) {
+  }
+}
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {
+  .frame {
+    overflow-y: initial;
+  }
+  @media (orientation: portrait) {
+    .frame {
+      overflow-y: initial;
+    }
+  }
+}
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+/* iPad Pro */
+@media (min-width: 1024px) {
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* Straight-up 1080 */
+@media (min-width: 1920px) {
+}
+
+/* Straight-up 4k Displays */
+@media (min-width: 3840px) {
+}

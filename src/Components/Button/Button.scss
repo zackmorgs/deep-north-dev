@@ -1,12 +1,12 @@
 @import './../../Styles/colors';
 
 .btn {
-  border: 2px solid white;
-  padding: (0.5rem) 0;
-  margin: 0 auto;
-  // margin:0 0 (1rem  - 0.15rem);
-  display: block;
+  padding: 1rem 1.5rem;
+  margin: 1rem auto;
+
+  display: flex;
   z-index: 2;
+  cursor: pointer;
 
   &:active {
     // background: $hotBlue;
@@ -21,24 +21,46 @@
 
   &.primary {
     // background-color:$green;
+
+    & + .btn {
+      background: #111;
+    }
   }
 }
 .btn-text {
-  display: none;
+  margin: 0 auto;
 }
-
-.primary {
-      background: #121252;
-    padding: .75rem;
-    margin-top: 1rem;
-    border:0;
+.btn-social {
+  display: block;
+  padding: 0;
   .btn-text {
-    display: initial;
-    font-weight:700;
+    text-align: center;
+    display: none;
   }
 }
 
+.primary {
+  background: #121252;
+  // padding: .75rem;
+  // margin-top: 1rem;
+  // border:0;
+  .btn-text {
+    display: initial;
+    font-weight: 700;
+  }
+
+  // & + .btn {
+  // }
+}
+
 .btn-icon {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  svg {
+    height: 1.5em;
+    width: auto;
+  }
 }
 
 // Start on the smallest screen, work your way up.
@@ -71,18 +93,29 @@
 /* Small devices (landscape phones, 544px and up) */
 @media (min-width: 544px) {
   .btn {
-    max-width: calc(56rem / 5);
+    // max-width: calc(56rem / 5);
+    padding: 1rem 3rem;
   }
 }
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
+  .btn-social {
+    display: block;
+    .btn-text {
+      display:initial;
+      font-size:0.75rem;
+    }
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .btn {
-    border: initial;
+    // border: initial;
+    &.primary {
+      // border: initial;
+    }
   }
   .btn-text {
     display: initial;

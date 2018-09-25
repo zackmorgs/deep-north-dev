@@ -105,8 +105,8 @@ export class Blueprint extends Component {
       }
 
 
-      var addLinesX_Interval = setInterval(timerAdd_X, 10);
-      var addLinesY_Interval = setInterval(timerAdd_Y, 10);
+      var addLinesX_Interval = setInterval(timerAdd_X, 0);
+      var addLinesY_Interval = setInterval(timerAdd_Y, 0);
     };
 
     let maxInterval = 2000;

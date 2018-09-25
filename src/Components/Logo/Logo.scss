@@ -11,18 +11,14 @@
   width: 100%;
   // max-height: 13rem;
   margin: 0 auto 1rem;
-  svg {
-    // color:white;
-  }
+.a,.c{fill:#fff;}.b{fill:#d7a03c;}.c{stroke:#fff;stroke-miterlimit:10;stroke-width:2px;}
 }
 
 /* (iPhone 5 Portrait [320px]) */
 
 /* iPhone 6 and above */
 @media (min-width: 375px) {
-  #logo {
-    max-height: 15rem;
-  }
+
 }
 
 @media (min-width: 414px) {
@@ -38,6 +34,9 @@
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
+  #logo {
+    max-height: 20rem;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */

@@ -5,6 +5,13 @@ import classNames from 'classnames';
 
 import './Button.css';
 
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Redirect
+} from 'react-router-dom';
+
 export class Button extends Component {
   constructor(props) {
     super(props);
@@ -33,6 +40,10 @@ export class Button extends Component {
     if (typeof this.props.href !== 'undefined') {
       document.location.href = this.props.href;
     }
+
+    if (typeof this.props.onClick !== 'undefined')
+      this.props.onClick()
+
   }
 
   handleMouseEnter() {
@@ -61,26 +72,29 @@ export class Button extends Component {
           btn: true,
           'btn-clicked': this.state.isClicked,
           'btn-hovered': this.stateisHovered,
-          'primary': this.props.kind == 'primary'
+          'primary': this.props.kind == 'primary',
+          'btn-social': this.props.kind == 'social'
         })}
       >
-        {this.props.children}
+        {typeof this.props.linkPath !== 'undefined' ? (
+          <Link to={this.props.linkPath}>{this.props.children}</Link>
+        ) : (
+          this.props.children
+        )}
       </a>
     );
   }
 }
 
-// class PrimaryButton extends Component {
-//   render() {
-//     return (
-//       <React.Fragment>
-//         <Button {...this.props}>
-//           {this.props.children}
-//         </Button>
-//       </React.Fragment>
-//     );
-//   }
-// }
+export class SocialButton extends Component {
+  constructor(props){
+    super(props);
+  }
+  render(){
+    this.props.className += ' btn-social';
+    return <Button {...this.props}>{this.props.children}</Button>;
+  }
+}
 
 export class ButtonIcon extends Component {
   render() {
@@ -91,6 +105,8 @@ export class ButtonIcon extends Component {
     );
   }
 }
+
+// let ButtonIcon = props =>  
 
 export class ButtonText extends Component {
   render() {

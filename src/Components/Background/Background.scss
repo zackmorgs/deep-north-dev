@@ -46,7 +46,7 @@ $bggridSpacing: 1rem;
 }
 
 // $lineColor: rgba(255, 255, 255, 0.125);
-$lineColor: rgba($hotBlue, 0.666);
+$lineColor: rgba(desaturate(rgba($hotBlue,1.0), 80.0), 0.25);
 
 .line-y {
   height: $bggridSpacing;
@@ -55,12 +55,17 @@ $lineColor: rgba($hotBlue, 0.666);
     width: 100%;
   }
 }
+
+$allLineBaseTransition:0s;
+
 .line-y,
 .line-x {
-  transition: width 0.25s ease-in-out, height 0.25s ease-in-out,
-    border 0.25s ease-in-out;
+  transition: 
+    width $allLineBaseTransition ease-in-out, 
+    height $allLineBaseTransition ease-in-out,
+    border $allLineBaseTransition ease-in-out;
 }
-$transitionOpacity: 1;
+$transitionBorderOpacity: 1;
 #blueprint.loading {
   .line-x {
     border-right: 1px dashed transparent;
@@ -71,23 +76,24 @@ $transitionOpacity: 1;
     &.loaded {
       height: 100%;
       // border-right: 1px dashed rgba(255, 255, 255, 0.2);
-      border-right: 1px dashed rgba($hotBlue, $transitionOpacity);
+      border-right: 1px dashed rgba($lineColor, $transitionBorderOpacity);
       &:nth-child(odd) {
-        opacity: 0.5;
+        // opacity: 0.75;
       }
     }
   }
 
   .line-y {
-    // border-bottom: 1px dashed rgba(255, 255, 255, $transitionOpacity);
-    border-bottom: 1px dashed rgba($hotBlue, $transitionOpacity);
+    // border-bottom: 1px dashed rgba(255, 255, 255, $transitionBorderOpacity);
+    border-bottom: 1px dashed rgba($lineColor, $transitionBorderOpacity);
 
     &.loaded {
-      // border-bottom: 1px dashed rgba(255, 255, 255, $transitionOpacity);
-      border-bottom: 1px dashed rgba($hotBlue, $transitionOpacity);
+      // border-bottom: 1px dashed rgba(255, 255, 255, $transitionBorderOpacity);
+      border-bottom: 1px dashed rgba($lineColor, $transitionBorderOpacity);
     }
   }
 }
+
 #blueprint.loaded {
   .line-x {
     width: $bggridSpacing;
@@ -98,7 +104,7 @@ $transitionOpacity: 1;
       border-right: 
        1px 
        dotted 
-       lighten($lineColor, 5.0);
+       $lineColor;
 
     }
   }
@@ -109,14 +115,14 @@ $transitionOpacity: 1;
   }
   .loaded {
     &:nth-child(odd) {
-      opacity: 0.75;
+      // opacity: 0.75;
       border-style: solid;
     }
     &:nth-child(even) {
-      opacity: 0.5;
-      border-image: url('/');
-      border-image-repeat: repeat;
-      border-image-slice:0 100%;
+      // opacity: 0.5;
+      // border-image: url('/');
+      // border-image-repeat: repeat;
+      // border-image-slice:0 100%;
     }
   }
 }

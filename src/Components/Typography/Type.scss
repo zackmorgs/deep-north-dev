@@ -1,4 +1,4 @@
-@import './../Styles/colors';
+@import './../../Styles/colors';
 
 :root {
   font-size: 18px;
@@ -24,6 +24,7 @@ h3,
   font-variant-ligatures: historical-ligatures;
   font-feature-settings: 'kern' 1, 'liga' 2;
 }
+
 h1 {
   font-size: 2.5rem;
   text-transform: capitalize;
@@ -31,35 +32,31 @@ h1 {
   margin-bottom: 0;
   font-weight: 700;
   font-variant-ligatures: historical-ligatures;
-  // color:$woahRed;
-
 }
+
 h2 {
   font-style: italic;
   font-size: 1.5rem;
   line-height: 2rem;
 }
+
 h3 {
-  font-size: 1.5rem;
+  // line-height:1.25em;
+  font-style: italic;
+  font-size: 1.75rem;
+  margin:1rem 0 -0.5rem;
+  font-weight:700;
+
+  // border-bottom:1px solid white;
+
   &.subtitle {
   }
 }
+
 footer {
   text-transform: uppercase;
   margin-top: 6rem;
   font-size: 0.5rem;
   color: lightgrey;
   font-weight: bolder;
-}
-p {
-  padding-top:1rem;
-  line-height:1.5rem;
-  // font-family: 'Cormorant Garamond', serif;
-  // font-size:20px;
-  font-weight: normal;
-  a {
-    color: #2b3cc7;
-    text-decoration: none;
-    font-weight:bold;
-  }
 }

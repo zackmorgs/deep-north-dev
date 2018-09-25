@@ -1,15 +1,12 @@
-ul {
-  line-height:2rem;
-  padding:1rem;
+#contact-list {
+  display:flex;
+  .icon {
+
+  }
+  li {
+
+  }
   a {
-    color:white;
-    text-decoration: none;
-    .icon {
-      display:block;
-      max-width:1rem;
-    }
-    &:visited {
-      color:white;
-    }
+    
   }
 }

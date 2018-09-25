@@ -1,0 +1,128 @@
+#gallery {
+}
+
+.image-list {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  grid-gap: 0.5rem;
+  margin: 1rem auto;
+  padding:0;
+
+  .thumbnail {
+    height: 100%;
+    width: 100%;
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+
+  }
+  li {
+    // max-width:10rem;
+    // height:auto;
+    // &:first-child {
+    //   width:100%;
+    //   height:auto;
+    max-height:6rem;
+    overflow-y: hidden;
+    // }
+    // display:flex;
+    // max-width: 10rem;
+    // max-height: 7rem;
+    // overflow-y: hidden;
+  }
+}
+.thumbnail {
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 10rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.spotlight {
+  width: 100%;
+  // max-height: 20rem;
+  // padding:1rem;
+  // overflow-y: hidden;
+  margin: 2rem auto 1rem;
+}
+.spotlight-image {
+  width: 100%;
+  min-height: 20rem;
+  display: block;
+  // border: 1px solid white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 1rem auto;
+}
+// Start on the smallest screen, work your way up.
+
+/* (iPhone 5 Portrait [320px]) */
+
+/* iPhone 6 and above */
+@media (min-width: 375px) {
+  .image-list {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media (orientation: portrait) {
+  }
+}
+
+@media (min-width: 414px) {
+  @media (orientation: portrait) {
+  }
+}
+
+/* Some larger smartphones in portrait mode */
+@media (min-width: 515px) {
+  @media (orientation: portrait) {
+  }
+}
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {
+  @media (orientation: portrait) {
+  }
+}
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .image-list {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  .spotlight-image {
+    background-size: contain;
+    min-height: 32rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+/* iPad Pro */
+@media (min-width: 1024px) {
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* Straight-up 1080 */
+@media (min-width: 1920px) {
+}
+
+/* Straight-up 4k Displays */
+@media (min-width: 3840px) {
+}

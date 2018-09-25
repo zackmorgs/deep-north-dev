@@ -1,0 +1,62 @@
+section {
+  // background:#222;
+  display:block;
+  padding:0rem 0;
+  margin:0rem auto;
+}
+
+/* (iPhone 5 Portrait [320px]) */
+
+/* iPhone 6 and above */
+@media (min-width: 375px) {
+  @media (orientation: portrait) {
+  }
+}
+
+@media (min-width: 414px) {
+  @media (orientation: portrait) {
+  }
+}
+
+/* Some larger smartphones in portrait mode */
+@media (min-width: 515px) {
+  @media (orientation: portrait) {
+  }
+}
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {
+  @media (orientation: portrait) {
+  }
+}
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  section {
+    max-width:32rem;
+    // margin:0 auto;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+/* iPad Pro */
+@media (min-width: 1024px) {
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* Straight-up 1080 */
+@media (min-width: 1920px) {
+}
+
+/* Straight-up 4k Displays */
+@media (min-width: 3840px) {
+}
+

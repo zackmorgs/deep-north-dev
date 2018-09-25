@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import { Phone, Mail, Facebook, Instagram } from 'react-feather';
+import { Phone, Mail, Facebook, Instagram, ChevronRight } from 'react-feather';
 
 // component
 import './Home.css';
@@ -21,6 +21,7 @@ import Location from './../../Components/Location/Location';
 import CallToAction from './../../Components/CallToAction/CallToAction';
 import {
   Button,
+  SocialButton,
   ButtonIcon,
   ButtonText
 } from './../../Components/Button/Button';
@@ -42,7 +43,7 @@ class Home extends Component {
   render() {
     // const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
     return (
-      <Page>
+      <Page pageTitle="Home" pageDescription="Homepage of Toronto's All-Purpose General Contracting 'Odd-job Specialists'; Deep North Contracting.">
         <Hero>
           {/* Image backgrounds */}
           {/* <HeroBackground>
@@ -61,10 +62,18 @@ class Home extends Component {
             </blockquote>
             <Location>
               Toronto &middot; Cottage Country &middot; Greater Area
-            </Location> 
+            </Location>
             <div className="cta">
-              <Button kind='primary' href='/about'>
+              <Button kind="primary" href="/about">
                 <ButtonText>Learn More</ButtonText>
+              </Button>
+              <Button href="/request-estimate">
+                <ButtonText>
+                  Get a Quote
+                </ButtonText>
+                {/* <ButtonIcon>
+                  <ChevronRight />
+                </ButtonIcon> */}
               </Button>
             </div>
           </div>
@@ -74,6 +83,7 @@ class Home extends Component {
             id="cta-btn-telephone"
             href="tel:+6477175252"
             alt="Give Us a Call"
+            kind="social"
           >
             <ButtonIcon>
               <Phone />
@@ -85,6 +95,7 @@ class Home extends Component {
             id="cta-btn-email"
             href="mailto:contracting@thedeepnorth.ca"
             alt="Email Us"
+            kind="social"
           >
             <ButtonIcon>
               <Mail />
@@ -96,6 +107,7 @@ class Home extends Component {
             id="cta-btn-facebook"
             href="http://instagram.com/deepnorthcontracting"
             alt="Visit Our Facebook"
+            kind="social"
           >
             <ButtonIcon>
               <Facebook />
@@ -106,6 +118,7 @@ class Home extends Component {
           <Button
             id="cta-btn-facebook"
             href="http://instagram.com/deepnorthcontracting"
+            kind="social"
           >
             <ButtonIcon>
               <Instagram />
