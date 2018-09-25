@@ -3,14 +3,13 @@
     <head>
         <meta charset="utf-8">
 
-        <meta >
-
         <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
 
         <meta name="apple-mobile-web-app-capable" content="yes"/>
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
         <meta name="theme-color" content="#000000">
+        <meta name="msapplication-TileColor" content="#000000">
 
         <!-- manifest.json provides metadata used when your web app is added to the homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/ -->
 
@@ -38,10 +37,6 @@
         <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon/favicon-16x16.png">
 
         <link rel="manifest" href="/manifest.json">
-        <!-- <meta name="msapplication-TileColor" content="#ffffff"> -->
-        <!-- <meta name="msapplication-TileImage" content="/ms-icon-144x144.png"> -->
-        <!-- <meta name="theme-color" content="#ffffff"> -->
-
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-125569059-1"></script>
@@ -55,20 +50,28 @@
             gtag('config', 'UA-125569059-1');
         </script>
 
-        <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" display="none">
-            <symbol id="icon-facebook">
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 58 58">
-                    <defs>
-                        <style>
-                            .cls-1 {
-                                fill: #fff;
-                            }
-                        </style>
-                    </defs>
-                    <path class="cls-1" d="M53.85,0H3.15A3.15,3.15,0,0,0,0,3.15v50.7A3.15,3.15,0,0,0,3.15,57h27.3V35H23V26.33h7.41V20c0-7.37,4.49-11.38,11.06-11.38A62.15,62.15,0,0,1,48.15,9v7.69H43.61c-3.57,0-4.26,1.69-4.26,4.18v5.5H47.9L46.79,35H39.35V57h14.5A3.15,3.15,0,0,0,57,53.85V3.15A3.15,3.15,0,0,0,53.85,0Z"/>
-                </svg>
-            </symbol>
-        </svg>
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "Organization",
+                "url": "https://thedeepnorth.ca/",
+                "logo": "https://thedeepnorth.ca/img/logo/logo-seo.png",
+                "name": "Deep North Contracting",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-(647)-717-5252",
+                    "email": "onquiries@thedeepnorth.ca",
+                    "contactType": "Customer service"
+                },
+                "sameAs": ["http://instagram.com/deepnorthcontracting"],
+                "areaServed": ["CA", "US"]
+            }
+        </script>
+
+        <meta property="og:url" content="https://thedeepnorth.ca/"/>
+        <meta property="og:title" content="Deep North Contracting" />
+        <meta property="og:description" content="General Contractors for the Toronto and the Greater Area."/>
+        <meta property="og:image" content="https://thedeepnorth.ca/img/facebook/OpenGraph-Default.png"/>
     </head>
     <body>
         <noscript>

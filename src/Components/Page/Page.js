@@ -47,8 +47,8 @@ export class Page extends Component {
           <meta property="og:url" content={document.location.href}/>
           <meta property="og:title" content={"Deep North Contracting |" + this.props.pageTitle } />
           <meta property="og:description" content={this.props.pageDescription} />
-          <meta property="og:image" content={this.props.facebookImage} />
-
+          <meta property="og:image" content="https://thedeepnorth.ca/img/facebook/OpenGraph-Default.png" />
+        
         </Helmet>
         <div {...this.props}>{this.props.children}</div>
       </React.Fragment>

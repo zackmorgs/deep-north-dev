@@ -136,10 +136,10 @@ export default class Website extends Component {
             <main>
               <Switch>
                 <Route path="/" exact component={Home} />
-                <Route path="/about/" component={About} />
-                <Route path="/contact/" component={Contact} />
-                <Route path="/request-estimate/" component={QuoteRequest} />
-                <Route path="/gallery/" component={Gallery} />
+                <Route path="/about" component={About} />
+                <Route path="/contact" component={Contact} />
+                <Route path="/request-estimate" component={QuoteRequest} />
+                <Route path="/gallery" component={Gallery} />
               </Switch>
               <footer>&copy; Copyright 2018. Deep North Contracting</footer>
             </main>

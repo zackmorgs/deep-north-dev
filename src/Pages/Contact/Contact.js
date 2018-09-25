@@ -27,7 +27,10 @@ class Contact extends Component {
     const emailLink = `mailto:${contact.email}?`;
     const phoneLink = `tel:+${contact.phone}`;
     return (
-      <Page pageTitle="Contact" pageDescription="Get in touch with Deep North Contracting">
+      <Page
+        pageTitle="Contact"
+        pageDescription="Get in touch with Deep North Contracting"
+      >
         <header>
           <h1>Contact</h1>
         </header>
@@ -35,10 +38,14 @@ class Contact extends Component {
         <p>Here are a few ways you can reach us:</p>
         <CallToAction>
           <Button href={emailLink} kind="primary">
-            <ButtonText>{contact.email}</ButtonText>
+            <ButtonText>
+              <small>{contact.email}</small>
+            </ButtonText>
           </Button>
           <Button href={phoneLink}>
-            <ButtonText>{contact.phone}</ButtonText>
+            <ButtonText>
+              <small>{contact.phone}</small>
+            </ButtonText>
           </Button>
         </CallToAction>
       </Page>

@@ -1,20 +1,28 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
-
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://thedeepnorth.ca</loc>
+    <loc>https://thedeepnorth.ca/</loc>
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://thedeepnorth.ca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.thedeepnorth.ca"/>
   </url>
   <url>
     <loc>https://thedeepnorth.ca/about</loc>
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://thedeepnorth.ca/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.thedeepnorth.ca/about"/>
   </url>
   <url>
     <loc>https://thedeepnorth.ca/gallery</loc>
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://thedeepnorth.ca/gallery"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.thedeepnorth.ca/gallery"/>
   </url>
   <url>
     <loc>https://thedeepnorth.ca/request-estimate</loc>
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://thedeepnorth.ca/request-esctimate"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.thedeepnorth.ca/request-estimate"/>
   </url>
   <url>
     <loc>https://thedeepnorth.ca/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://thedeepnorth.ca/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.thedeepnorth.ca/contact"/>
   </url>
 </urlset> 
